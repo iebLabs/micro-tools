@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BioCraft | Viraler Social Media Bio Generator für Instagram & TikTok</title>
+    <meta name="description" content="Erstelle in Sekunden fesselnde Biografien mit Emojis, Bullet Points und klarem Call-to-Action für Instagram, TikTok und LinkedIn. Von iebLabs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-950 font-sans text-slate-100 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header mit iebLabs Branding -->
+    <header class="border-b border-slate-800 bg-slate-900/80 backdrop-blur sticky top-0 z-40">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 bg-gradient-to-tr from-pink-500 via-rose-500 to-amber-500 rounded-lg flex items-center justify-center text-white font-black text-lg shadow-lg">
+                    <i class="fas fa-sparkles"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-white">Bio<span class="text-pink-500">Craft</span></span>
+                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                </div>
+            </div>
+            <span class="text-xs bg-pink-500/20 text-pink-300 border border-pink-500/30 px-2.5 py-1 rounded-full font-medium">
+                Profil-Booster
+            </span>
+        </div>
+    </header>
+
+    <!-- Werbeplatzhalter Oben -->
+    <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
+        <div class="bg-slate-900 border border-dashed border-slate-800 rounded-lg p-2 text-center text-xs text-slate-500">
+            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+                Verwandle Profilbesucher in <br class="sm:hidden">
+                <span class="bg-gradient-to-r from-pink-500 to-amber-400 bg-clip-text text-transparent">treue Follower & Kunden.</span>
+            </h1>
+            <p class="text-slate-400 text-sm sm:text-base">
+                Deine Bio ist deine digitale Visitenkarte. Wähle deine Nische, deinen Stil und erhalte sofort 4 optimierte Profil-Bios mit Emojis und Link-in-Bio Call-to-Action.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Linke Spalte: Setup -->
+            <div class="lg:col-span-5 bg-slate-900 border border-slate-800 p-6 rounded-2xl shadow-xl">
+                <h2 class="text-base font-bold text-white mb-4 flex items-center">
+                    <i class="fas fa-magic text-pink-500 mr-2"></i> Profil-Setup
+                </h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Deine Nische / Thema</label>
+                        <select id="nischeSelect" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                            <option value="fitness">Fitness, Gym & Ernährung</option>
+                            <option value="business">Business, Side-Hustles & Finanzen</option>
+                            <option value="beauty">Beauty, Lifestyle & Fashion</option>
+                            <option value="tech">Tech, AI & Coding</option>
+                            <option value="travel">Travel, Vanlife & Abenteuer</option>
+                            <option value="creator">Creator & Personal Brand</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Dein Name / Brand-Name</label>
+                        <input type="text" id="nameInput" placeholder="z. B. Alex | Online Coach" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Was ist dein wichtigstes Angebot / USP?</label>
+                        <input type="text" id="angebotInput" placeholder="z. B. Hilft dir in 90 Tagen zum Wunschgewicht" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-400 mb-1">Dein Link-Ziel (Call-to-Action)</label>
+                        <input type="text" id="ctaInput" placeholder="z. B. Kostenloser Trainingsplan 👇" class="w-full bg-slate-950 border border-slate-700 rounded-lg px-3 py-2.5 text-sm text-white focus:ring-2 focus:ring-pink-500 focus:outline-none">
+                    </div>
+
+                    <button type="button" onclick="generateBios()" class="w-full bg-gradient-to-r from-pink-500 via-rose-500 to-amber-500 hover:opacity-90 text-white font-bold py-3 rounded-lg shadow-lg transition flex items-center justify-center space-x-2 text-sm">
+                        <i class="fas fa-sparkles"></i>
+                        <span>4 Perfekte Bios generieren</span>
+                    </button>
+                </div>
+
+                <!-- Affiliate Box Creator Tools -->
+                <div class="mt-6 pt-5 border-t border-slate-800 text-center">
+                    <span class="text-xs text-slate-400 block mb-2">Tipp: Professionelle Link-in-Bio Seite erstellen?</span>
+                    <a href="https://beacons.ai" target="_blank" class="inline-block text-xs font-bold bg-pink-500/20 border border-pink-500/40 hover:bg-pink-500/30 text-pink-300 px-4 py-2 rounded-lg transition">
+                        🔗 Kostenlosen Beacons / Linktree Account sichern
+                    </a>
+                </div>
+            </div>
+
+            <!-- Rechte Spalte: Generierte Bios -->
+            <div class="lg:col-span-7 space-y-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs uppercase tracking-wider font-bold text-slate-400">
+                        <i class="fas fa-check-circle text-pink-500 mr-1"></i> Deine Bio-Varianten
+                    </span>
+                    <span class="text-xs text-slate-500" id="bioCounter">Bereit</span>
+                </div>
+
+                <div id="bioResultsContainer" class="space-y-3">
+                    <!-- Cards per JS -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="border-t border-slate-900 bg-slate-950 py-6 text-center text-xs text-slate-600">
+        <p>&copy; 2026 BioCraft • An iebLabs Project • Kostenlose Social Media Tools</p>
+    </footer>
+
+    <!-- Logik -->
+    <script>
+        function generateBios() {
+            const name = document.getElementById('nameInput').value.trim() || 'Alex | Creator';
+            const angebot = document.getElementById('angebotInput').value.trim() || 'Tägliche Tipps für mehr Erfolg & Fokus';
+            const cta = document.getElementById('ctaInput').value.trim() || 'Gratis Guide sichern 👇';
+            const nische = document.getElementById('nischeSelect').value;
+
+            const nischenEmojis = {
+                fitness: ['💪', '🥗', '⚡', '🏆'],
+                business: ['💼', '📈', '🚀', '💰'],
+                beauty: ['✨', '💄', '🌸', '🤍'],
+                tech: ['💻', '🤖', '🔥', '⚙️'],
+                travel: ['✈️', '🌍', '📸', '🌴'],
+                creator: ['🎙️', '✨', '💡', '🎬']
+            };
+
+            const e = nischenEmojis[nische] || ['✨', '🚀', '💡', '👇'];
+
+            const variants = [
+                {
+                    stil: "Minimal & Seriös",
+                    text: `${name}\n${e[0]} ${angebot}\n${e[1]} Kein Schnickschnack. Nur Resultate.\n${e[2]} Community: 10k+ Macher\n${cta}`
+                },
+                {
+                    stil: "Story & Identifikation",
+                    text: `${name}\n${e[0]} Vom Anfänger zum Profi\n${e[1]} Ich helfe dir dabei: ${angebot}\n${e[2]} Neue Videos jeden Tag!\n${cta}`
+                },
+                {
+                    stil: "Auf den Punkt (High Conversion)",
+                    text: `${name}\n${e[0]} ${angebot}\n${e[1]} 100% praxisnah & erprobt\n${e[2]} Starte noch heute durch\n${cta}`
+                },
+                {
+                    stil: "Bullet-Point Klassiker",
+                    text: `${name}\n• ${angebot}\n• Tägliche Insights & Mehrwert\n• 100% Free Knowledge\n${cta}`
+                }
+            ];
+
+            const container = document.getElementById('bioResultsContainer');
+            container.innerHTML = '';
+
+            variants.forEach((v, idx) => {
+                const card = document.createElement('div');
+                card.className = "bg-slate-900 border border-slate-800 p-4 rounded-xl hover:border-pink-500/50 transition";
+                card.innerHTML = `
+                    <div class="flex items-center justify-between mb-2 pb-2 border-b border-slate-800">
+                        <span class="text-[10px] font-bold uppercase tracking-wider text-pink-400">Variante ${idx + 1}: ${v.stil}</span>
+                        <button onclick="copyBio(this, \`${v.text.replace(/`/g, "\\`")}\`)" class="text-xs bg-slate-800 hover:bg-slate-700 text-slate-200 px-3 py-1 rounded transition">
+                            <i class="far fa-copy mr-1"></i> Kopieren
+                        </button>
+                    </div>
+                    <pre class="text-xs sm:text-sm font-sans text-slate-200 whitespace-pre-wrap leading-relaxed">${v.text}</pre>
+                `;
+                container.appendChild(card);
+            });
+
+            document.getElementById('bioCounter').innerText = "4 Varianten erstellt";
+        }
+
+        function copyBio(btn, text) {
+            navigator.clipboard.writeText(text).then(() => {
+                btn.innerHTML = '<i class="fas fa-check text-emerald-400 mr-1"></i> Kopiert!';
+                setTimeout(() => {
+                    btn.innerHTML = '<i class="far fa-copy mr-1"></i> Kopieren';
+                }, 2000);
+            });
+        }
+
+        // Init
+        generateBios();
+    </script>
+</body>
+</html>

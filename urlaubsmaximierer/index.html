@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UrlaubsTageMaximierer | Brückentage 2026 berechnen & Urlaub verdoppeln</title>
+    <meta name="description" content="Verdopple deinen Jahresurlaub mit den perfekten Brückentagen 2026. Berechne nach Bundesland, wie du aus 25 Urlaubstagen bis zu 52 freie Tage herausholst. Von iebLabs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header mit iebLabs Branding -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 bg-sky-500 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow">
+                    <i class="fas fa-umbrella-beach"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900">Urlaubs<span class="text-sky-500">Maximierer</span></span>
+                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                </div>
+            </div>
+            <span class="text-xs bg-sky-50 text-sky-700 font-bold px-3 py-1 rounded-full border border-sky-200">
+                Kalender 2026
+            </span>
+        </div>
+    </header>
+
+    <!-- Werbeplatzhalter Oben -->
+    <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
+        <div class="bg-slate-200 border border-dashed border-slate-300 rounded-lg p-2 text-center text-xs text-slate-400">
+            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+                Verdopple deinen Urlaub. <br class="sm:hidden">
+                <span class="text-sky-500">Die besten Brückentage 2026.</span>
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Wähle dein Bundesland und plane deine Urlaubstage rund um gesetzliche Feiertage, um mit minimalem Urlaubseinsatz maximale Freizeit am Stück zu genießen.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Linke Spalte: Filter -->
+            <div class="lg:col-span-5 bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center">
+                    <i class="fas fa-calendar-alt text-sky-500 mr-2"></i> Bundesland wählen
+                </h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Dein Bundesland</label>
+                        <select id="bundeslandSelect" onchange="renderBrueckentage()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-sky-500 focus:outline-none">
+                            <option value="NI" selected>Niedersachsen</option>
+                            <option value="NW">Nordrhein-Westfalen</option>
+                            <option value="BY">Bayern</option>
+                            <option value="BW">Baden-Württemberg</option>
+                            <option value="HE">Hessen</option>
+                            <option value="BE">Berlin</option>
+                            <option value="HH">Hamburg</option>
+                            <option value="SN">Sachsen</option>
+                        </select>
+                    </div>
+
+                    <div class="bg-sky-50 border border-sky-200 rounded-xl p-4 text-center">
+                        <span class="text-xs uppercase font-bold text-sky-800 block mb-1">Möglicher Freizeitgewinn 2026</span>
+                        <div class="text-3xl font-black text-sky-600" id="potenzialTage">54 Freie Tage</div>
+                        <span class="text-xs text-sky-700">bei Einsatz von nur 24 Urlaubstagen</span>
+                    </div>
+
+                    <!-- Reise Affiliate Box -->
+                    <div class="pt-2">
+                        <span class="text-xs font-bold text-slate-700 block mb-2">Frühbucher-Urlaub sichern:</span>
+                        <a href="https://www.booking.com" target="_blank" class="block text-center w-full bg-sky-500 hover:bg-sky-600 text-white font-bold py-2.5 rounded-lg text-xs shadow transition">
+                            <i class="fas fa-plane-departure mr-1"></i> Günstige Hotels für Brückentage finden
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rechte Spalte: Brückentag-Empfehlungen -->
+            <div class="lg:col-span-7 space-y-4">
+                <div class="flex items-center justify-between">
+                    <span class="text-xs uppercase tracking-wider font-bold text-slate-500">
+                        <i class="fas fa-star text-sky-500 mr-1"></i> Die besten Urlaubs-Slots 2026
+                    </span>
+                    <span class="text-xs bg-emerald-100 text-emerald-800 font-bold px-2.5 py-0.5 rounded-full">
+                        Empfohlen
+                    </span>
+                </div>
+
+                <div id="brueckenContainer" class="space-y-3">
+                    <!-- Cards per JS -->
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 UrlaubsMaximierer • An iebLabs Project • Feiertage nach deutschem Feiertagsrecht.</p>
+    </footer>
+
+    <!-- Logik -->
+    <script>
+        const feiertageSlots = [
+            {
+                titel: "Ostern 2026 (Karfreitag bis Ostermontag)",
+                zeitraum: "03.04.2026 – 12.04.2026",
+                urlaubstage: 4,
+                freietage: 10,
+                tipp: "4 Urlaubstage nehmen (Dienstag bis Freitag nach Ostern) = 10 Tage am Stück frei!"
+            },
+            {
+                titel: "Christi Himmelfahrt 2026",
+                zeitraum: "14.05.2026 – 17.05.2026",
+                urlaubstage: 1,
+                freietage: 4,
+                tipp: "Klassischer Fenstertag: Nur der Freitag (15. Mai) als Urlaubstag nötig für ein 4-Tage-Wochenende."
+            },
+            {
+                titel: "Pfingsten 2026",
+                zeitraum: "23.05.2026 – 31.05.2026",
+                urlaubstage: 4,
+                freietage: 9,
+                tipp: "4 Urlaubstage nach Pfingstmontag einreichen = 9 freie Tage im Frühsommer."
+            },
+            {
+                titel: "Tag der Deutschen Einheit 2026",
+                zeitraum: "03.10.2026",
+                urlaubstage: 0,
+                freietage: 2,
+                tipp: "Fällt 2026 auf einen Samstag."
+            },
+            {
+                titel: "Weihnachten & Neujahr 2026/2027",
+                zeitraum: "24.12.2026 – 03.01.2027",
+                urlaubstage: 4,
+                freietage: 11,
+                tipp: "Mit nur 4 Urlaubstagen zwischen den Jahren 11 freie Tage am Stück herausholen!"
+            }
+        ];
+
+        function renderBrueckentage() {
+            const container = document.getElementById('brueckenContainer');
+            container.innerHTML = '';
+
+            feiertageSlots.forEach(slot => {
+                const card = document.createElement('div');
+                card.className = "bg-white p-5 rounded-xl border border-slate-200 shadow-sm hover:border-sky-300 transition";
+                card.innerHTML = `
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <h3 class="text-sm font-bold text-slate-900">${slot.titel}</h3>
+                            <span class="text-xs text-sky-600 font-semibold block mb-2"><i class="far fa-clock mr-1"></i> ${slot.zeitraum}</span>
+                        </div>
+                        <div class="text-right">
+                            <span class="text-xs bg-sky-100 text-sky-800 font-bold px-2 py-1 rounded">
+                                ${slot.urlaubstage} Tage Urlaub ➔ ${slot.freietage} Tage frei
+                            </span>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-600 mt-2 bg-slate-50 p-2.5 rounded-lg border border-slate-100">
+                        ${slot.tipp}
+                    </p>
+                `;
+                container.appendChild(card);
+            });
+        }
+
+        // Init
+        renderBrueckentage();
+    </script>
+</body>
+</html>
