@@ -1,77 +1,93 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>HandwerkerSteuerCheck | Handwerkerkosten nach § 35a EStG von der Steuer absetzen</title>
-    <meta name="description" content="Berechne in 30 Sekunden, wie viel Euro du für Handwerker-Arbeitskosten vom Finanzamt zurückbekommst (20% von bis zu 6.000 € Arbeitslohn). Von iebLabs.">
+    <title>HandwerkerDeal v2.0 PRO | Handwerkerkosten nach § 35a EStG von der Steuer absetzen</title>
+    <meta name="description" content="Berechne in 30 Sekunden deinen Steuerbonus für Handwerkerleistungen (20% von bis zu 6.000 € Arbeitslohn = bis zu 1.200 € direkte Steuererstattung).">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103550567947274" crossorigin="anonymous"></script>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-900 font-sans text-slate-100 antialiased min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
 
     <!-- Header mit iebLabs Branding -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <header class="bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40">
         <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-9 h-9 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow">
-                    <i class="fas fa-receipt"></i>
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-amber-500 to-orange-400 rounded-xl flex items-center justify-center text-slate-950 font-black text-lg shadow-lg shadow-amber-500/20">
+                    <i class="fas fa-tools"></i>
                 </div>
                 <div>
-                    <span class="font-extrabold text-xl tracking-tight text-slate-900">Handwerker<span class="text-emerald-600">Steuer</span></span>
-                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-black text-xl tracking-tight text-white">Handwerker<span class="text-amber-400">Deal</span></span>
+                        <span class="text-[10px] bg-amber-500/20 text-amber-300 font-extrabold px-2 py-0.5 rounded-full border border-amber-500/30 uppercase tracking-wider">v2.0 PRO</span>
+                    </div>
+                    <span class="text-[10px] block text-slate-400 font-medium">by iebLabs • Steuerrecht (§ 35a Abs. 3 EStG)</span>
                 </div>
             </div>
-            <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-3 py-1 rounded-full border border-emerald-200">
-                § 35a Abs. 3 EStG Rechner
-            </span>
+            <div class="flex items-center space-x-2">
+                <a href="https://github.com/iebLabs" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/80 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <i class="fab fa-github text-sm"></i> <span class="hidden sm:inline">GitHub</span>
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Werbeplatzhalter Oben -->
     <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
-        <div class="bg-slate-200 border border-dashed border-slate-300 rounded-lg p-2 text-center text-xs text-slate-400">
-            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        <div class="bg-slate-950/60 border border-dashed border-slate-800 rounded-xl p-3 text-center text-xs text-slate-500">
+            <span class="inline-block bg-slate-800/80 px-2 py-0.5 rounded text-[10px] font-mono text-amber-400 mr-2">WERBUNG</span>
+            <span>Steuererklärung online in 17 Minuten abgeben & Handwerkerbonus direkt auszahlen lassen &rarr;</span>
         </div>
     </div>
 
     <!-- Main Container -->
     <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
         <div class="text-center max-w-2xl mx-auto mb-8">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
-                Handwerkerrechnung bezahlt? <br class="sm:hidden">
-                <span class="text-emerald-600">Hol dir bis zu 1.200 € vom Staat zurück.</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+                Handwerkerrechnung bezahlt? <br>
+                <span class="text-amber-400">Hol dir bis zu 1.200 € direkt vom Finanzamt zurück</span>
             </h1>
-            <p class="text-slate-600 text-sm sm:text-base">
-                Nach § 35a EStG erstattet das Finanzamt 20% der reinen Arbeits-, Maschinen- und Fahrtkosten direkt von deiner Einkommensteuerschuld.
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                Nach § 35a Abs. 3 EStG zieht das Finanzamt 20% deiner reinen Arbeits-, Maschinen- und Fahrtkosten direkt 1:1 von deiner festgesetzten Einkommensteuer ab.
             </p>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-8 items-start">
             
             <!-- Linke Spalte: Formular -->
-            <div class="lg:col-span-6 bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200">
-                <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center">
-                    <i class="fas fa-file-invoice text-emerald-600 mr-2"></i> Rechnungsbeträge eingeben
+            <div class="lg:col-span-6 bg-slate-950/80 p-6 sm:p-7 rounded-2xl shadow-xl border border-slate-800 space-y-4">
+                <h2 class="text-base font-bold text-white flex items-center border-b border-slate-800/80 pb-3">
+                    <i class="fas fa-file-invoice text-amber-400 mr-2"></i> Rechnungsbetrag eingeben
                 </h2>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Reine Arbeits-, Fahrt- & Maschinenkosten (€ brutto)</label>
-                        <input type="number" id="arbeitsLohn" value="2800" min="0" step="50" oninput="calculateHandwerkerSteuer()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                        <span class="text-[11px] text-slate-400">Nur Arbeitslohn ist absetzbar (Materialkosten sind gesetzlich ausgeschlossen).</span>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Reine Arbeits- & Fahrtkosten (€ brutto)</label>
+                            <span class="text-xs text-amber-400 font-mono font-bold" id="lohnDisplay">2.800 €</span>
+                        </div>
+                        <input type="number" id="arbeitsLohn" value="2800" min="0" step="50" oninput="calculateHandwerkerSteuer()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:ring-2 focus:ring-amber-500 focus:outline-none font-mono">
+                        <span class="text-[11px] text-slate-500 block mt-1">Nur Lohn- und Fahrtkosten sind absetzbar (Materialkosten sind gesetzlich ausgeschlossen).</span>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Bereits im selben Steuerjahr abgesetzte Arbeitskosten (€)</label>
-                        <input type="number" id="vorherigeKosten" value="0" min="0" step="50" oninput="calculateHandwerkerSteuer()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
-                        <span class="text-[11px] text-slate-400">Der jährliche Höchstbetrag liegt bei maximal 6.000 € Arbeitslohn pro Haushalt.</span>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Im Steuerjahr bereits abgesetzt (€)</label>
+                            <span class="text-xs text-slate-400 font-mono font-bold" id="vorherDisplay">0 €</span>
+                        </div>
+                        <input type="number" id="vorherigeKosten" value="0" min="0" step="50" oninput="calculateHandwerkerSteuer()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-sm font-bold text-white focus:ring-2 focus:ring-amber-500 focus:outline-none font-mono">
+                        <span class="text-[11px] text-slate-500 block mt-1">Gesetzlicher Höchstbetrag: maximal 6.000 € Arbeitslohn pro Jahr / Haushalt.</span>
                     </div>
 
-                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800 space-y-1">
-                        <div class="font-bold flex items-center"><i class="fas fa-exclamation-circle text-amber-600 mr-1.5"></i> Gesetzliche Voraussetzung:</div>
-                        <p>Die Rechnung muss per <strong>Banküberweisung</strong> bezahlt worden sein. Barzahlungen (auch gegen Quittung) erkennt das Finanzamt niemals an!</p>
+                    <div class="bg-amber-950/40 border border-amber-500/40 rounded-xl p-3.5 text-xs text-amber-200 space-y-1">
+                        <strong class="text-amber-300 block flex items-center gap-1">
+                            <i class="fas fa-exclamation-triangle"></i> Wichtige gesetzliche Voraussetzung:
+                        </strong>
+                        <p class="leading-relaxed">
+                            Die Rechnung muss zwingend per <strong>Banküberweisung</strong> bezahlt worden sein (Kontoauszug als Nachweis). Barzahlungen erkennt das Finanzamt ausnahmslos **nicht** an!
+                        </p>
                     </div>
                 </div>
             </div>
@@ -79,33 +95,39 @@
             <!-- Rechte Spalte: Steuererstattung & Steuersoftware -->
             <div class="lg:col-span-6 space-y-4">
                 
-                <!-- Hauptkachel -->
-                <div class="bg-gradient-to-r from-emerald-900 to-slate-900 text-white p-6 rounded-2xl shadow-lg border-l-4 border-emerald-400">
-                    <span class="text-xs uppercase font-bold tracking-widest text-emerald-300 block mb-1">Deine Steuererstattung (Cashback)</span>
-                    <div class="text-4xl sm:text-5xl font-black text-white" id="steuerErstattung">560,00 €</div>
-                    <div class="mt-3 flex items-center justify-between text-xs text-emerald-100 border-t border-emerald-700/60 pt-3">
-                        <span>Fördersatz: <strong class="text-white">20% direkt</strong></span>
-                        <span>Max. Erstattung: <strong class="text-white">1.200 € / Jahr</strong></span>
+                <div class="bg-gradient-to-br from-amber-950 via-slate-950 to-slate-900 text-white p-6 rounded-2xl shadow-xl border border-amber-500/30">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-amber-300">Deine direkte Steuererstattung</span>
+                        <span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded font-bold font-mono">20% VOM STAAT</span>
+                    </div>
+                    <div class="text-4xl sm:text-5xl font-black text-white font-mono my-2 tracking-tight" id="erstattungSumme">560,00 €</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 mt-2">
+                        <div>Verbleibender Puffer: <strong id="verbleibendLohn" class="text-emerald-400 font-mono">3.200 €</strong></div>
+                        <div>Maximalerstattung: <strong class="text-amber-300 font-mono">1.200 €/Jahr</strong></div>
                     </div>
                 </div>
 
-                <!-- Info Box -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-xs text-slate-600 space-y-2">
-                    <span class="font-bold uppercase tracking-wider text-slate-900 block">💡 Direkte Steuerermäßigung</span>
-                    <p>
-                        Dieser Betrag mindert nicht nur dein zu versteuerndes Einkommen, sondern wird <strong>1:1 direkt von deiner Steuerschuld abgezogen</strong>. Wenn du Steuern zahlst, landet dieser Betrag direkt auf deinem Konto!
+                <!-- Paragraphen-Erklärung Kachel -->
+                <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 text-xs text-slate-300 space-y-2">
+                    <span class="font-extrabold uppercase tracking-wider text-amber-400 flex items-center gap-1.5">
+                        <i class="fas fa-landmark"></i> Keine bloße Minderung der Steuerbasis!
+                    </span>
+                    <p class="leading-relaxed">
+                        Das Geniale an § 35a EStG: Es mindert nicht nur dein zu versteuerndes Einkommen, sondern wird **direkt von deiner Steuerschuld abgezogen**. Bei 560 € Erstattung hast du exakt 560 € mehr netto auf dem Konto.
                     </p>
                 </div>
 
-                <!-- HIGH-TICKET AFFILIATE KACHEL (Steuer-Software) -->
-                <div class="bg-emerald-50 border border-emerald-300 p-5 rounded-2xl shadow-sm">
-                    <span class="text-xs uppercase font-bold tracking-wider text-emerald-800 block mb-1">
-                        <i class="fas fa-calculator text-emerald-600 mr-1"></i> Steuererklärung in 15 Minuten per App
+                <!-- Steuererklärung Partner Lead -->
+                <div class="bg-emerald-950/30 border border-emerald-500/30 p-5 rounded-2xl shadow-lg">
+                    <span class="text-xs uppercase font-extrabold tracking-wider text-emerald-400 block mb-1">
+                        <i class="fas fa-coins text-emerald-400 mr-1"></i> Geld nicht verschenken
                     </span>
-                    <h3 class="text-sm font-bold text-slate-900 mb-1">Rechnung einscannen & Geld zurückholen</h3>
-                    <p class="text-xs text-slate-600 mb-3">Mit Taxfix oder WISO Steuer machst du deine Steuererklärung ohne Beamtendeutsch direkt am Handy.</p>
-                    <a href="https://taxfix.de" target="_blank" class="block text-center w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg text-xs shadow transition">
-                        Steuererklärung online starten
+                    <h3 class="text-sm font-bold text-white mb-1.5">Steuererklärung online machen & Handwerkerkosten eintragen</h3>
+                    <p class="text-xs text-slate-300 mb-3 leading-relaxed">
+                        Nutze moderne Steuer-Apps wie WISO oder Taxfix – Handwerkerrechnungen lassen sich einfach per Smartphone abfotografieren.
+                    </p>
+                    <a href="https://taxfix.de" target="_blank" class="block text-center w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-2.5 rounded-xl text-xs shadow-lg shadow-emerald-500/20 transition">
+                        Steuererklärung mit Handwerkerbonus starten &rarr;
                     </a>
                 </div>
 
@@ -114,24 +136,80 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-        <p>&copy; 2026 HandwerkerSteuer • An iebLabs Project • Rechner ersetzt keine Steuerberatung.</p>
+    <!-- Footer mit Buy me a Coffee & Modal Trigger -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-6 text-center text-xs text-slate-400">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 <strong>HandwerkerDeal v2.0 PRO</strong> • by <a href="https://github.com/iebLabs" target="_blank" class="text-slate-300 hover:text-white font-bold underline">iebLabs</a>
+            </div>
+            
+            <a href="https://paypal.me/iebsie" target="_blank" class="inline-flex items-center gap-1.5 bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-full text-xs font-bold transition">
+                <span>☕</span> <span>Spendier dem Dev einen Kaffee</span>
+            </a>
+
+            <div class="flex items-center space-x-4 text-xs">
+                <button onclick="openModal('impressum')" class="hover:text-white underline">Impressum</button>
+                <button onclick="openModal('datenschutz')" class="hover:text-white underline">Datenschutz</button>
+            </div>
+        </div>
+        <p class="text-[11px] text-slate-600 mt-3 max-w-xl mx-auto">
+            Rechtlicher Hinweis: Dieser Rechner dient der unverbindlichen Orientierung und stellt keine Steuerberatung nach dem StBerG dar.
+        </p>
     </footer>
+
+    <!-- Impressum / Datenschutz Modal -->
+    <div id="legalModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 max-w-lg w-full rounded-2xl p-6 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg font-bold">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent" class="text-xs text-slate-300 space-y-3 max-h-[70vh] overflow-y-auto pr-2">
+            </div>
+        </div>
+    </div>
 
     <!-- Logik -->
     <script>
         function calculateHandwerkerSteuer() {
-            const lohn = parseFloat(document.getElementById('arbeitsLohn').value) || 0;
-            const vorher = parseFloat(document.getElementById('vorherigeKosten').value) || 0;
+            const aktuellerLohn = parseFloat(document.getElementById('arbeitsLohn').value) || 0;
+            const vorherLohn = parseFloat(document.getElementById('vorherigeKosten').value) || 0;
 
-            const maxGesamtLohn = 6000;
-            const nochMoeglich = Math.max(0, maxGesamtLohn - vorher);
-            const ansetzbar = Math.min(lohn, nochMoeglich);
+            document.getElementById('lohnDisplay').innerText = aktuellerLohn.toLocaleString('de-DE') + ' €';
+            document.getElementById('vorherDisplay').innerText = vorherLohn.toLocaleString('de-DE') + ' €';
 
-            const erstattung = ansetzbar * 0.20;
+            const maxJahresLohn = 6000;
+            const nochVerfuegbar = Math.max(0, maxJahresLohn - vorherLohn);
+            const ansetzbarerLohn = Math.min(aktuellerLohn, nochVerfuegbar);
+            const erstattung = ansetzbarerLohn * 0.20;
+            const restPuffer = Math.max(0, nochVerfuegbar - ansetzbarerLohn);
 
-            document.getElementById('steuerErstattung').innerText = erstattung.toFixed(2).replace('.', ',') + ' €';
+            document.getElementById('erstattungSumme').innerText = erstattung.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            document.getElementById('verbleibendLohn').innerText = restPuffer.toLocaleString('de-DE') + ' €';
+        }
+
+        function openModal(type) {
+            const content = document.getElementById('modalContent');
+            const modal = document.getElementById('legalModal');
+
+            if (type === 'impressum') {
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Impressum</h3>
+                    <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                    <p>iebLabs<br>Inhaber: Ibrahim Schimmel<br>Braunschweig, Deutschland</p>
+                    <p><strong>Kontakt:</strong><br>E-Mail: digital-braunschweig@gmx.de<br>Mobil: 0177 5822380</p>
+                `;
+            } else {
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Datenschutzerklärung</h3>
+                    <p><strong>1. Datenschutz:</strong> Alle Berechnungen erfolgen ausschließlich lokal im Browser.</p>
+                    <p><strong>2. Werbedienste (Google AdSense):</strong> Wir setzen Google AdSense ein.</p>
+                `;
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('legalModal').classList.add('hidden');
         }
 
         // Init
