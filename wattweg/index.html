@@ -1,0 +1,167 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StromFresserFinder | Stromkosten von Haushaltsgeräten berechnen</title>
+    <meta name="description" content="Finde heraus, wie viel Euro deine alten Haushaltsgeräte (Kühlschrank, Fernseher, Waschmaschine, PC) wirklich pro Jahr an Strom fressen. Von iebLabs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103550567947274" crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header mit iebLabs Branding -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 bg-yellow-500 rounded-lg flex items-center justify-center text-slate-950 font-bold text-lg shadow">
+                    <i class="fas fa-bolt"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900">StromFresser<span class="text-yellow-500">Finder</span></span>
+                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                </div>
+            </div>
+            <span class="text-xs bg-yellow-50 text-yellow-800 font-bold px-3 py-1 rounded-full border border-yellow-200">
+                Energie-Sparer 2026
+            </span>
+        </div>
+    </header>
+
+    <!-- Werbeplatzhalter Oben -->
+    <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
+        <div class="bg-slate-200 border border-dashed border-slate-300 rounded-lg p-2 text-center text-xs text-slate-400">
+            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+                Wo fließt dein Strom hin? <br class="sm:hidden">
+                <span class="text-yellow-600">Stromfresser sofort enttarnen.</span>
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Wähle ein Gerät oder gib die Wattzahl ein, um auf den Cent genau zu sehen, wie viel Geld dich der Betrieb pro Tag, Monat und Jahr kostet.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Linke Spalte: Formular -->
+            <div class="lg:col-span-6 bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center">
+                    <i class="fas fa-plug text-yellow-500 mr-2"></i> Gerät & Nutzungsdauer
+                </h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Typisches Haushaltsgerät wählen</label>
+                        <select id="geraeteVorlagen" onchange="applyVorlage()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+                            <option value="custom">Eigenen Watt-Wert eingeben</option>
+                            <option value="kuehlschrank" data-watt="120" data-hours="8" selected>Alter Kühlschrank (Dauerbetrieb ca. 120 W effektiv)</option>
+                            <option value="gaming_pc" data-watt="380" data-hours="4">Gaming-PC unter Last (380 Watt)</option>
+                            <option value="fernseher" data-watt="140" data-hours="4">Großer Fernseher 65 Zoll (140 Watt)</option>
+                            <option value="heizluefter" data-watt="2000" data-hours="2">Elektrischer Heizlüfter (2.000 Watt)</option>
+                            <option value="standby" data-watt="35" data-hours="24">Diverse Geräte im Standby (35 Watt permanent)</option>
+                            <option value="trockner" data-watt="2500" data-hours="1.5">Wäschetrockner (2.500 Watt pro Durchgang)</option>
+                        </select>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-3">
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Leistung (in Watt)</label>
+                            <input type="number" id="leistungWatt" value="120" min="1" step="5" oninput="calculateStrom()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+                        </div>
+                        <div>
+                            <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Stunden pro Tag (h)</label>
+                            <input type="number" id="stundenTag" value="8" min="0.1" max="24" step="0.5" oninput="calculateStrom()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Dein Strompreis (€ pro kWh)</label>
+                        <input type="number" id="stromPreis" value="0.36" min="0.1" step="0.01" oninput="calculateStrom()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-yellow-500 focus:outline-none">
+                        <span class="text-[11px] text-slate-400">Bundesweiter Durchschnitt liegt aktuell bei ca. 0,36 € / kWh.</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rechte Spalte: Kosten & Strom-Tarif-Wechsel -->
+            <div class="lg:col-span-6 space-y-4">
+                
+                <!-- Hauptkachel -->
+                <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-2xl shadow-lg border-l-4 border-yellow-400">
+                    <span class="text-xs uppercase font-bold tracking-widest text-yellow-300 block mb-1">Kosten pro Jahr</span>
+                    <div class="text-4xl sm:text-5xl font-black text-white" id="jahrKosten">126,14 €</div>
+                    <div class="mt-3 flex items-center justify-between text-xs text-slate-300 border-t border-slate-700 pt-3">
+                        <span>Pro Monat: <strong id="monatKosten" class="text-white">10,51 €</strong></span>
+                        <span>Verbrauch: <strong id="kwhJahr" class="text-white">350 kWh / Jahr</strong></span>
+                    </div>
+                </div>
+
+                <!-- Spar-Tipp Box -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-xs text-slate-600 space-y-2">
+                    <span class="font-bold uppercase tracking-wider text-slate-900 block">💡 Lohnt sich ein Neugerät?</span>
+                    <p>
+                        Ein 12 Jahre alter Kühlschrank verbraucht oft über 350 kWh pro Jahr (ca. 126 €). Ein modernes A-Klasse Gerät benötigt unter 100 kWh (ca. 36 €). **Ersparnis: Bis zu 90 € jedes Jahr.**
+                    </p>
+                </div>
+
+                <!-- AFFILIATE STROMVERGLEICH KACHEL -->
+                <div class="bg-yellow-50 border border-yellow-300 p-5 rounded-2xl shadow-sm">
+                    <span class="text-xs uppercase font-bold tracking-wider text-yellow-800 block mb-1">
+                        <i class="fas fa-bolt text-yellow-600 mr-1"></i> Zahlst du zu viel für Strom?
+                    </span>
+                    <h3 class="text-sm font-bold text-slate-900 mb-1">Stromtarif vergleichen & bis zu 350 € sparen</h3>
+                    <p class="text-xs text-slate-600 mb-3">Oft lässt sich der Strompreis pro kWh mit einem einzigen Wechsel von 40 Cent auf 28 Cent senken.</p>
+                    <a href="https://www.check24.de/strom/" target="_blank" class="block text-center w-full bg-yellow-500 hover:bg-yellow-600 text-slate-950 font-bold py-2.5 rounded-lg text-xs shadow transition">
+                        Günstigste Stromanbieter vergleichen
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 StromFresserFinder • An iebLabs Project • Energiekosten-Transparenz.</p>
+    </footer>
+
+    <!-- Logik -->
+    <script>
+        function applyVorlage() {
+            const select = document.getElementById('geraeteVorlagen');
+            const selected = select.options[select.selectedIndex];
+            if (select.value !== 'custom') {
+                document.getElementById('leistungWatt').value = selected.getAttribute('data-watt');
+                document.getElementById('stundenTag').value = selected.getAttribute('data-hours');
+            }
+            calculateStrom();
+        }
+
+        function calculateStrom() {
+            const watt = parseFloat(document.getElementById('leistungWatt').value) || 0;
+            const stunden = parseFloat(document.getElementById('stundenTag').value) || 0;
+            const preis = parseFloat(document.getElementById('stromPreis').value) || 0.36;
+
+            const kwhTag = (watt * stunden) / 1000;
+            const kwhJahr = kwhTag * 365;
+
+            const kostenJahr = kwhJahr * preis;
+            const kostenMonat = kostenJahr / 12;
+
+            document.getElementById('jahrKosten').innerText = kostenJahr.toFixed(2).replace('.', ',') + ' €';
+            document.getElementById('monatKosten').innerText = kostenMonat.toFixed(2).replace('.', ',') + ' €';
+            document.getElementById('kwhJahr').innerText = Math.round(kwhJahr) + ' kWh / Jahr';
+        }
+
+        // Init
+        calculateStrom();
+    </script>
+</body>
+</html>
