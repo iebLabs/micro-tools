@@ -1,71 +1,80 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mietminderungs-Rechner | Kostenlose Mietminderung nach BGB berechnen</title>
-    <meta name="description" content="Berechne in 1 Minute deinen gesetzlichen Anspruch auf Mietminderung bei Schimmel, Heizungsausfall, Baulärm oder Wasserschaden. Inkl. Mängelanzeige-Vorlage.">
+    <title>MietSenker v2.0 PRO | Mietminderung & Mietpreisbremse berechnen (§ 536 BGB)</title>
+    <meta name="description" content="Berechne in 1 Minute deinen gesetzlichen Anspruch auf Mietminderung bei Schimmel, Heizungsausfall, Baulärm sowie Rückforderung nach Mietpreisbremse (§ 556d BGB).">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103550567947274" crossorigin="anonymous"></script>
 </head>
-<body class="bg-gray-50 font-sans text-gray-800 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-900 font-sans text-slate-100 antialiased min-h-screen flex flex-col justify-between selection:bg-teal-500 selection:text-slate-950">
 
-    <!-- Header -->
-    <header class="bg-white border-b border-gray-200 sticky top-0 z-40">
+    <!-- Header mit iebLabs Branding -->
+    <header class="bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40">
         <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-9 h-9 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-xl shadow">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-teal-500 to-emerald-400 rounded-xl flex items-center justify-center text-slate-950 font-black text-lg shadow-lg shadow-teal-500/20">
                     <i class="fas fa-home"></i>
                 </div>
                 <div>
-                    <span class="font-bold text-xl tracking-tight text-gray-900">Miet<span class="text-teal-600">Rechner</span>.de</span>
-                    <span class="text-[10px] block text-gray-400 font-medium uppercase tracking-wider">Mietminderung nach § 536 BGB</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-black text-xl tracking-tight text-white">Miet<span class="text-teal-400">Senker</span></span>
+                        <span class="text-[10px] bg-teal-500/20 text-teal-300 font-extrabold px-2 py-0.5 rounded-full border border-teal-500/30 uppercase tracking-wider">v2.0 PRO</span>
+                    </div>
+                    <span class="text-[10px] block text-slate-400 font-medium">by iebLabs • Mietrecht & BGB 2026</span>
                 </div>
             </div>
-            <span class="text-xs bg-teal-50 text-teal-700 font-bold px-3 py-1 rounded-full border border-teal-200">
-                Kostenlose Orientierung
-            </span>
+            <div class="flex items-center space-x-2">
+                <a href="https://github.com/iebLabs" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/80 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <i class="fab fa-github text-sm"></i> <span class="hidden sm:inline">GitHub</span>
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Werbeplatzhalter Oben -->
     <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
-        <div class="bg-gray-200 border border-dashed border-gray-300 rounded-lg p-2 text-center text-xs text-gray-400">
-            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        <div class="bg-slate-950/60 border border-dashed border-slate-800 rounded-xl p-3 text-center text-xs text-slate-500">
+            <span class="inline-block bg-slate-800/80 px-2 py-0.5 rounded text-[10px] font-mono text-teal-400 mr-2">WERBUNG</span>
+            <span>Miete zu hoch? Jetzt kostenlose Mietpreisbremse-Prüfung & Mietrechtsschutz vergleichen</span>
         </div>
     </div>
 
-    <!-- Main Rechner -->
+    <!-- Main Container -->
     <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
         <div class="text-center max-w-2xl mx-auto mb-8">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-gray-900 tracking-tight mb-3">
-                Mietminderung berechnen & <br class="sm:hidden">
-                <span class="text-teal-600">Mängelanzeige erstellen.</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+                Zu viel Miete bezahlt? <br>
+                <span class="text-teal-400">Mietminderung & Mängelanzeige erstellen</span>
             </h1>
-            <p class="text-gray-600 text-sm sm:text-base">
-                Ermittle anhand gängiger Gerichtsurteile deinen Minderungsanspruch und lade sofort das fertige Anschreiben an deinen Vermieter herunter.
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                Ermittle anhand aktueller Gerichtsurteile deinen Minderungsanspruch nach § 536 BGB und lade sofort das fertige Anschreiben an deinen Vermieter herunter.
             </p>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-8 items-start">
             
-            <!-- Linke Spalte: Rechner Formular -->
-            <div class="lg:col-span-6 bg-white p-6 rounded-2xl shadow-sm border border-gray-200">
-                <h2 class="text-base font-bold text-gray-900 mb-4 flex items-center">
-                    <i class="fas fa-calculator text-teal-600 mr-2"></i> Miete & Mangel eingeben
+            <!-- Linke Spalte: Formular -->
+            <div class="lg:col-span-6 bg-slate-950/80 p-6 sm:p-7 rounded-2xl shadow-xl border border-slate-800 space-y-4">
+                <h2 class="text-base font-bold text-white flex items-center border-b border-slate-800/80 pb-3">
+                    <i class="fas fa-calculator text-teal-400 mr-2"></i> Miete & Mangel eingeben
                 </h2>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Deine monatliche Warmmiete (€)</label>
-                        <input type="number" id="warmmiete" value="950" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none">
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Monatliche Warmmiete (€)</label>
+                            <span class="text-xs text-teal-400 font-mono font-bold" id="mieteDisplay">950 €</span>
+                        </div>
+                        <input type="number" id="warmmiete" value="950" min="200" step="50" oninput="calculateMinderung()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:ring-2 focus:ring-teal-500 focus:outline-none font-mono">
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Vorliegender Mangel</label>
-                        <select id="mangelSelect" onchange="updateMangelProzent()" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                            <option value="20" data-desc="Heizungsausfall in den Wintermonaten (Totalausfall)">Heizungsausfall Winter (ca. 20% - 100%)</option>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Typischer Mangel (Gerichtsurteile)</label>
+                        <select id="mangelSelect" onchange="updateMangelProzent()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-teal-500 focus:outline-none">
+                            <option value="20" data-desc="Heizungsausfall in den Wintermonaten (Totalausfall)">Heizungsausfall im Winter (ca. 20% - 100%)</option>
                             <option value="15" data-desc="Erheblicher Schimmelbefall in Wohn- oder Schlafräumen">Schimmelbildung in Wohnräumen (ca. 10% - 25%)</option>
                             <option value="25" data-desc="Ständiger extremer Baulärm im oder direkt am Haus">Extremer Baulärm (ca. 20% - 30%)</option>
                             <option value="10" data-desc="Ausfall der Warmwasserversorgung">Kein Warmwasser (ca. 10% - 15%)</option>
@@ -75,67 +84,59 @@
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Minderungssatz in Prozent</label>
-                        <div class="flex items-center space-x-2">
-                            <input type="number" id="minderungProzent" value="20" min="1" max="100" class="w-24 bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm font-bold text-teal-700 focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                            <span class="text-xs text-gray-500">(Anpassbar nach Schwere des Mangels)</span>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Minderungssatz in %</label>
+                            <span class="text-xs text-teal-400 font-mono font-bold" id="prozentDisplay">20%</span>
                         </div>
+                        <input type="range" id="prozentRange" min="1" max="100" value="20" oninput="syncProzentFromRange()" class="w-full accent-teal-500 mb-1">
+                        <input type="number" id="minderungProzent" value="20" min="1" max="100" oninput="syncProzentFromNumber()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-sm font-bold text-white focus:ring-2 focus:ring-teal-500 focus:outline-none font-mono">
                     </div>
 
-                    <div class="grid grid-cols-2 gap-3">
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Dein Name</label>
-                            <input type="text" id="mieterName" placeholder="Max Mustermann" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                        </div>
-                        <div>
-                            <label class="block text-xs font-bold uppercase tracking-wider text-gray-700 mb-1">Name des Vermieters</label>
-                            <input type="text" id="vermieterName" placeholder="Hausverwaltung Schmidt" class="w-full bg-gray-50 border border-gray-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                        </div>
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 text-xs text-slate-400 space-y-1">
+                        <strong class="text-teal-400 block">⚖️ Rechtsgrundlage (§ 536 Abs. 1 BGB):</strong>
+                        Der Bundesgerichtshof (BGH) hat entschieden: Die Mietminderung wird stets von der **Brutto-Warmmiete** berechnet (inkl. Nebenkostenvorauszahlung). Miete ab Mängelanzeige immer nur **„unter Vorbehalt“** zahlen!
                     </div>
-
-                    <button type="button" onclick="calculateMinderung()" class="w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-3 rounded-lg shadow-md hover:shadow-lg transition flex items-center justify-center space-x-2 text-sm">
-                        <i class="fas fa-check-circle"></i>
-                        <span>Anspruch & Brief berechnen</span>
-                    </button>
                 </div>
             </div>
 
-            <!-- Rechte Spalte: Ergebnis & Mängelanzeige -->
+            <!-- Rechte Spalte: Beträge & Mängelrüge -->
             <div class="lg:col-span-6 space-y-4">
                 
-                <!-- Kachel: Ersparnis -->
-                <div class="bg-gradient-to-r from-teal-700 to-emerald-800 text-white p-6 rounded-2xl shadow-md">
-                    <span class="text-xs uppercase font-bold tracking-widest text-teal-200 block mb-1">Mögliche Mietminderung pro Monat</span>
-                    <div class="text-4xl font-extrabold" id="ersparnisEuro">190,00 €</div>
-                    <p class="text-xs text-teal-100 mt-2">
-                        Berechnet auf Basis von <span id="labelProzent" class="font-bold">20%</span> Minderung bei <span id="labelMiete" class="font-bold">950 €</span> Warmmiete.
+                <div class="bg-gradient-to-br from-teal-950 via-slate-950 to-slate-900 text-white p-6 rounded-2xl shadow-xl border border-teal-500/30">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-teal-300">Deine monatliche Ersparnis</span>
+                        <span class="text-[10px] bg-teal-500/20 text-teal-300 border border-teal-500/30 px-2 py-0.5 rounded font-bold font-mono" id="minderungSatzBadge">20% Minderung</span>
+                    </div>
+                    <div class="text-4xl sm:text-5xl font-black text-white font-mono my-2 tracking-tight" id="ersparnisMonat">190,00 €</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 mt-2">
+                        <div>Gekürzte Warmmiete: <strong id="neueMiete" class="text-emerald-400 font-mono">760,00 €</strong></div>
+                        <div>Tagesersparnis: <strong id="ersparnisTag" class="text-teal-300 font-mono">6,33 €/Tag</strong></div>
+                    </div>
+                </div>
+
+                <!-- Mängelrüge Generator -->
+                <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 text-xs space-y-2.5">
+                    <span class="font-extrabold uppercase tracking-wider text-slate-200 block">
+                        📋 1-Klick Mängelanzeige an Vermieter kopieren
+                    </span>
+                    <button onclick="copyMaengelruege()" class="w-full bg-teal-500 hover:bg-teal-400 text-slate-950 font-extrabold py-2.5 rounded-xl text-xs shadow-lg shadow-teal-500/20 transition flex items-center justify-center space-x-1.5">
+                        <i class="far fa-copy"></i>
+                        <span>Musterschreiben mit Paragraphen kopieren</span>
+                    </button>
+                    <span id="copyNotice" class="hidden text-xs text-emerald-400 block text-center font-bold">✅ Mängelrüge in Zwischenablage kopiert!</span>
+                </div>
+
+                <!-- Mieterschutz Lead -->
+                <div class="bg-slate-950/80 border border-slate-800 p-5 rounded-2xl shadow-lg">
+                    <span class="text-xs uppercase font-extrabold tracking-wider text-slate-400 block mb-1">
+                        <i class="fas fa-shield-alt text-teal-400 mr-1"></i> Konfliktfrei Recht durchsetzen
+                    </span>
+                    <h3 class="text-sm font-bold text-white mb-1.5">Deutscher Mieterbund & Mietervereine</h3>
+                    <p class="text-xs text-slate-400 mb-3 leading-relaxed">
+                        Vermieter reagieren oft mit Kündigungsandrohung. Schütze dich vor Eigenbedarfskündigungen mit professionellem Mieterschutz.
                     </p>
-                </div>
-
-                <!-- Brief-Ergebnis -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-gray-200">
-                    <div class="flex items-center justify-between mb-3 pb-2 border-b border-gray-100">
-                        <span class="text-xs uppercase font-bold tracking-wider text-gray-500">
-                            <i class="fas fa-envelope-open-text text-teal-600 mr-1"></i> Gesetzliche Mängelanzeige (§ 536c BGB)
-                        </span>
-                        <button onclick="copyBrief()" id="briefCopyBtn" class="text-xs bg-gray-100 hover:bg-gray-200 text-gray-700 font-semibold px-3 py-1 rounded transition">
-                            <i class="far fa-copy mr-1"></i> Kopieren
-                        </button>
-                    </div>
-
-                    <div id="briefText" class="bg-gray-50 border border-gray-200 rounded-lg p-4 text-xs font-mono text-gray-700 whitespace-pre-wrap leading-relaxed max-h-72 overflow-y-auto">
-Klicke auf "Anspruch & Brief berechnen", um das Mängelanzeigeschreiben anzuzeigen.
-                    </div>
-                </div>
-
-                <!-- Affiliate Kachel: Mieter-Rechtsschutz -->
-                <div class="bg-amber-50 border border-amber-200 p-4 rounded-xl flex items-center justify-between">
-                    <div>
-                        <span class="text-xs font-bold text-amber-900 block"><i class="fas fa-gavel text-amber-600 mr-1"></i> Ärger mit dem Vermieter vermeiden?</span>
-                        <span class="text-[11px] text-amber-700">Eine Mieter-Rechtsschutzversicherung übernimmt Anwaltskosten komplett.</span>
-                    </div>
-                    <a href="https://www.check24.de/rechtsschutzversicherung/" target="_blank" class="text-xs bg-amber-500 hover:bg-amber-600 text-gray-950 font-bold px-3 py-1.5 rounded-lg transition whitespace-nowrap">
-                        Tarife prüfen
+                    <a href="https://www.mieterbund.de" target="_blank" class="block text-center w-full bg-slate-800 hover:bg-slate-700 text-white font-extrabold py-2 rounded-xl text-xs border border-slate-700 transition">
+                        Örtlichen Mieterverein finden &rarr;
                     </a>
                 </div>
 
@@ -144,75 +145,132 @@ Klicke auf "Anspruch & Brief berechnen", um das Mängelanzeigeschreiben anzuzeig
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-gray-200 py-6 text-center text-xs text-gray-500">
-        <p>&copy; 2026 MietRechner.de • Keine Rechtsberatung im Sinne des RDG. Orientierungshilfe basierend auf Urteilssammlungen.</p>
+    <!-- Footer mit Buy me a Coffee & Modal Trigger -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-6 text-center text-xs text-slate-400">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 <strong>MietSenker v2.0 PRO</strong> • by <a href="https://github.com/iebLabs" target="_blank" class="text-slate-300 hover:text-white font-bold underline">iebLabs</a>
+            </div>
+            
+            <a href="https://paypal.me/iebsie" target="_blank" class="inline-flex items-center gap-1.5 bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-full text-xs font-bold transition">
+                <span>☕</span> <span>Spendier dem Dev einen Kaffee</span>
+            </a>
+
+            <div class="flex items-center space-x-4 text-xs">
+                <button onclick="openModal('impressum')" class="hover:text-white underline">Impressum</button>
+                <button onclick="openModal('datenschutz')" class="hover:text-white underline">Datenschutz</button>
+            </div>
+        </div>
+        <p class="text-[11px] text-slate-600 mt-3 max-w-xl mx-auto">
+            Rechtlicher Hinweis: Dieser Rechner dient der unverbindlichen Orientierung und stellt keine Rechtsberatung im Sinne des RDG dar.
+        </p>
     </footer>
+
+    <!-- Impressum / Datenschutz Modal -->
+    <div id="legalModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 max-w-lg w-full rounded-2xl p-6 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg font-bold">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent" class="text-xs text-slate-300 space-y-3 max-h-[70vh] overflow-y-auto pr-2">
+            </div>
+        </div>
+    </div>
 
     <!-- Logik -->
     <script>
         function updateMangelProzent() {
-            const select = document.getElementById('mangelSelect');
-            document.getElementById('minderungProzent').value = select.value;
+            const val = document.getElementById('mangelSelect').value;
+            document.getElementById('minderungProzent').value = val;
+            document.getElementById('prozentRange').value = val;
+            calculateMinderung();
+        }
+
+        function syncProzentFromRange() {
+            const val = document.getElementById('prozentRange').value;
+            document.getElementById('minderungProzent').value = val;
+            calculateMinderung();
+        }
+
+        function syncProzentFromNumber() {
+            const val = document.getElementById('minderungProzent').value;
+            document.getElementById('prozentRange').value = val;
+            calculateMinderung();
         }
 
         function calculateMinderung() {
             const miete = parseFloat(document.getElementById('warmmiete').value) || 0;
             const prozent = parseFloat(document.getElementById('minderungProzent').value) || 0;
-            const mieter = document.getElementById('mieterName').value.trim() || '[Ihr Name]';
-            const vermieter = document.getElementById('vermieterName').value.trim() || '[Name des Vermieters / Hausverwaltung]';
-            const mangelText = document.getElementById('mangelSelect').options[document.getElementById('mangelSelect').selectedIndex].text;
 
-            const ersparnis = (miete * (prozent / 100)).toFixed(2);
+            document.getElementById('mieteDisplay').innerText = miete.toLocaleString('de-DE') + ' €';
+            document.getElementById('prozentDisplay').innerText = prozent + '%';
+            document.getElementById('minderungSatzBadge').innerText = prozent + '% Minderung';
 
-            document.getElementById('ersparnisEuro').innerText = ersparnis.replace('.', ',') + ' €';
-            document.getElementById('labelProzent').innerText = prozent + '%';
-            document.getElementById('labelMiete').innerText = miete.toFixed(0) + ' €';
+            const ersparnis = (miete * prozent) / 100;
+            const neu = Math.max(0, miete - ersparnis);
+            const tag = ersparnis / 30;
 
+            document.getElementById('ersparnisMonat').innerText = ersparnis.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            document.getElementById('neueMiete').innerText = neu.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            document.getElementById('ersparnisTag').innerText = tag.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €/Tag';
+        }
+
+        function copyMaengelruege() {
+            const miete = document.getElementById('warmmiete').value;
+            const prozent = document.getElementById('minderungProzent').value;
+            const select = document.getElementById('mangelSelect');
+            const mangelText = select.options[select.selectedIndex].getAttribute('data-desc') || select.options[select.selectedIndex].text;
             const heute = new Date().toLocaleDateString('de-DE');
 
-            const brief = `${mieter}
-Mietwohnung
+            const text = `Mängelanzeige & Ankündigung der Mietminderung gemäß § 536 BGB
 
 Datum: ${heute}
 
-An:
-${vermieter}
+Sehr geehrte/r Vermieter/in,
 
+in der von mir gemieteten Wohnung liegt seit einiger Zeit folgender erheblicher Mangel vor:
+${mangelText}
 
-BETREFF: Mängelanzeige gemäß § 536c BGB und Ankündigung Mietminderung
-Mietobjekt: [Adresse der Mietwohnung]
+Dieser Mangel beeinträchtigt den vertragsgemäßen Gebrauch der Mietsache spürbar.
 
-Sehr geehrte Damen und Herren,
+Ich fordere Sie hiermit höflich auf, den Mangel bis spätestens zum [Frist in 14 Tagen einsetzen] fachgerecht zu beseitigen.
 
-in der von mir angemieteten Wohnung liegt seit kurzem folgender erheblicher Mangel vor, der die vertragsgemäße Tauglichkeit der Mietsache spürbar einschränkt:
-
-• Festgestellter Mangel: ${mangelText}
-
-Ich fordere Sie hiermit höflich auf, diesen Mangel unverzüglich, spätestens jedoch bis zum [Frist in 10 Tagen eintragen], fachgerecht zu beseitigen.
-
-Aufgrund der Beeinträchtigung behalte ich mir das Recht vor, die monatliche Warmmiete ab dem Tag des Mangeleintritts um ${prozent}% (entspricht ca. ${ersparnis.replace('.', ',')} € / Monat) zu mindern bzw. künftige Mietzahlungen nur noch unter ausdrücklichem Vorbehalt der Rückforderung zu leisten.
-
-Bitte teilen Sie mir zeitnah einen Termin zur Mängelbeseitigung mit.
+Aufgrund des Mangels mache ich mein gesetzliches Recht auf Mietminderung nach § 536 Abs. 1 BGB in Höhe von ${prozent}% der Bruttowarmmiete geltend. Die Miete wird ab sofort bis zur vollständigen Mängelbeseitigung nur noch unter ausdrücklichem Vorbehalt der Rückforderung gezahlt.
 
 Mit freundlichen Grüßen
+[Ihr Name]`;
 
-
-__________________________________
-${mieter}`;
-
-            document.getElementById('briefText').innerText = brief;
+            navigator.clipboard.writeText(text).then(() => {
+                const notice = document.getElementById('copyNotice');
+                notice.classList.remove('hidden');
+                setTimeout(() => notice.classList.add('hidden'), 2500);
+            });
         }
 
-        function copyBrief() {
-            const text = document.getElementById('briefText').innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                const btn = document.getElementById('briefCopyBtn');
-                btn.innerHTML = '<i class="fas fa-check text-teal-600 mr-1"></i> Kopiert!';
-                setTimeout(() => {
-                    btn.innerHTML = '<i class="far fa-copy mr-1"></i> Kopieren';
-                }, 2000);
-            });
+        function openModal(type) {
+            const content = document.getElementById('modalContent');
+            const modal = document.getElementById('legalModal');
+
+            if (type === 'impressum') {
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Impressum</h3>
+                    <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                    <p>iebLabs<br>Inhaber: Ibrahim Schimmel<br>Braunschweig, Deutschland</p>
+                    <p><strong>Kontakt:</strong><br>E-Mail: digital-braunschweig@gmx.de<br>Mobil: 0177 5822380</p>
+                    <p><strong>Haftungshinweis:</strong> Die genannten Minderungssätze stellen Richtwerte aus Gerichtsurteilen dar. Jeder Einzelfall kann gerichtlich anders bewertet werden.</p>
+                `;
+            } else {
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Datenschutzerklärung</h3>
+                    <p><strong>1. Datenschutz:</strong> Sämtliche Miet- und Mangelangaben werden nur lokal in Ihrem Browser berechnet.</p>
+                    <p><strong>2. Werbedienste (Google AdSense):</strong> Zur Refinanzierung der Serverkosten schalten wir Werbeanzeigen.</p>
+                `;
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('legalModal').classList.add('hidden');
         }
 
         // Init
