@@ -1,0 +1,161 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AbfindungsCheck | Abfindung bei Kündigung berechnen nach § 1a KSchG</title>
+    <meta name="description" content="Berechne in 30 Sekunden deine geschätzte Abfindung bei Kündigung oder Aufhebungsvertrag nach Arbeitsrecht. Kostenloser Abfindungsrechner von iebLabs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103550567947274" crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header mit iebLabs Branding -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 bg-indigo-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow">
+                    <i class="fas fa-balance-scale"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900">Abfindungs<span class="text-indigo-600">Check</span></span>
+                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                </div>
+            </div>
+            <span class="text-xs bg-indigo-50 text-indigo-700 font-bold px-3 py-1 rounded-full border border-indigo-200">
+                Arbeitsrecht 2026
+            </span>
+        </div>
+    </header>
+
+    <!-- Werbeplatzhalter Oben -->
+    <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
+        <div class="bg-slate-200 border border-dashed border-slate-300 rounded-lg p-2 text-center text-xs text-slate-400">
+            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+                Kündigung erhalten? <br class="sm:hidden">
+                <span class="text-indigo-600">Wie viel Abfindung steht dir zu?</span>
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Ermittle in Sekunden deine voraussichtliche Abfindungshöhe nach der Faustformel deutscher Arbeitsgerichte (§ 1a KSchG).
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Linke Spalte: Formular -->
+            <div class="lg:col-span-6 bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center">
+                    <i class="fas fa-calculator text-indigo-600 mr-2"></i> Eckdaten eingeben
+                </h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Bruttomonatsgehalt (€)</label>
+                        <input type="number" id="bruttoGehalt" value="3800" min="500" step="100" oninput="calculateAbfindung()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Dauer der Betriebszugehörigkeit (Jahre)</label>
+                        <input type="number" id="jahreDauer" value="6" min="1" max="50" oninput="calculateAbfindung()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Abfindungsfaktor</label>
+                        <select id="faktorSelect" onchange="calculateAbfindung()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                            <option value="0.5">0,5 Monatsgehälter / Jahr (Gesetzlicher Regelwert / Durchschnitt)</option>
+                            <option value="1.0">1,0 Monatsgehalt / Jahr (Gute Verhandlung / Große Konzerne)</option>
+                            <option value="1.5">1,5 Monatsgehälter / Jahr (Besonders starker Kündigungsschutz)</option>
+                            <option value="0.25">0,25 Monatsgehälter / Jahr (Konservative Schätzung)</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Grund der Beendigung</label>
+                        <select id="beendigungGrund" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-indigo-500 focus:outline-none">
+                            <option value="kuendigung">Betriebsbedingte Kündigung durch Arbeitgeber</option>
+                            <option value="aufhebung">Angebotener Aufhebungsvertrag</option>
+                            <option value="abwicklung">Abwicklungsvertrag / Sozialplan</option>
+                        </select>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800 flex items-start space-x-2">
+                        <i class="fas fa-exclamation-triangle text-amber-600 mt-0.5"></i>
+                        <span><strong>Wichtig (3-Wochen-Frist):</strong> Gegen eine Kündigung muss innerhalb von 3 Wochen Kündigungsschutzklage eingereicht werden, um eine Abfindung zu erzwingen!</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rechte Spalte: Ergebnis & Anwaltspartner -->
+            <div class="lg:col-span-6 space-y-4">
+                
+                <!-- Hauptkachel: Betrag -->
+                <div class="bg-gradient-to-r from-indigo-900 to-slate-900 text-white p-6 rounded-2xl shadow-lg border-l-4 border-indigo-500">
+                    <span class="text-xs uppercase font-bold tracking-widest text-indigo-300 block mb-1">Geschätzte Brutto-Abfindung</span>
+                    <div class="text-4xl sm:text-5xl font-black text-white" id="abfindungSumme">11.400 €</div>
+                    <div class="mt-3 flex items-center justify-between text-xs text-slate-300 border-t border-slate-700 pt-3">
+                        <span>Faktor: <strong id="labelFaktor" class="text-white">0,5</strong> Monatsgehälter</span>
+                        <span>Dauer: <strong id="labelJahre" class="text-white">6 Jahre</strong></span>
+                    </div>
+                </div>
+
+                <!-- Steuer-Tipp Kachel -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-xs text-slate-600 space-y-2">
+                    <span class="font-bold uppercase tracking-wider text-slate-900 block">💡 Steuern sparen mit der Fünftelregelung</span>
+                    <p>
+                        Abfindungen sind einkommensteuerpflichtig, aber **sozialabgabenfrei** (keine Renten-, Kranken- oder Pflegeversicherung). Durch die steuerliche *Fünftelregelung* (§ 34 EStG) wird die Steuerprogression deutlich gemildert.
+                    </p>
+                </div>
+
+                <!-- HIGH-TICKET PARTNER-LEAD (Arbeitsrecht) -->
+                <div class="bg-emerald-50 border border-emerald-300 p-5 rounded-2xl shadow-sm">
+                    <div class="flex items-start justify-between">
+                        <div>
+                            <span class="text-xs uppercase font-bold tracking-wider text-emerald-800 block mb-1">
+                                <i class="fas fa-gavel text-emerald-600 mr-1"></i> Kostenlose Ersteinschätzung
+                            </span>
+                            <h3 class="text-sm font-bold text-slate-900 mb-1">Kündigung vom Fachanwalt für Arbeitsrecht prüfen lassen</h3>
+                            <p class="text-xs text-slate-600 mb-3">Oft lässt sich die Abfindung durch juristische Verhandlung verdoppeln. Bei Rechtsschutzversicherung fallen meist 0 € Kosten an.</p>
+                        </div>
+                    </div>
+                    <a href="https://www.anwaltsauskunft.de" target="_blank" class="block text-center w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg text-xs shadow transition">
+                        Jetzt kostenlose Ersteinschätzung anfordern
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 AbfindungsCheck • An iebLabs Project • Berechnungen dienen als unverbindliche Orientierungshilfe.</p>
+    </footer>
+
+    <!-- Logik -->
+    <script>
+        function calculateAbfindung() {
+            const gehalt = parseFloat(document.getElementById('bruttoGehalt').value) || 0;
+            const jahre = parseFloat(document.getElementById('jahreDauer').value) || 0;
+            const faktor = parseFloat(document.getElementById('faktorSelect').value) || 0.5;
+
+            const summe = Math.round(gehalt * jahre * faktor);
+
+            document.getElementById('abfindungSumme').innerText = summe.toLocaleString('de-DE') + ' €';
+            document.getElementById('labelFaktor').innerText = faktor.toString().replace('.', ',');
+            document.getElementById('labelJahre').innerText = jahre + ' Jahre';
+        }
+
+        // Init
+        calculateAbfindung();
+    </script>
+</body>
+</html>
