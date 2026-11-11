@@ -1,136 +1,149 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TierarztKostenCheck | Tierarztkosten nach GOT 2026 berechnen</title>
-    <meta name="description" content="Berechne in 20 Sekunden die Kosten für Behandlungen, OPs und Impfungen bei Hund und Katze nach der aktuellen Gebührenordnung für Tierärzte (GOT). Von iebLabs.">
+    <title>KrallenCheck v2.0 PRO | Tierarztkosten nach GOT 2026 berechnen (1x bis 4x Satz)</title>
+    <meta name="description" content="Berechne in 20 Sekunden die Tierarztkosten für Hund, Katze & Kleintier nach der aktuellen Gebührenordnung (GOT). Inkl. Notdienstgebühr & Tierkrankenversicherung.">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103550567947274" crossorigin="anonymous"></script>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-900 font-sans text-slate-100 antialiased min-h-screen flex flex-col justify-between selection:bg-emerald-500 selection:text-slate-950">
 
     <!-- Header mit iebLabs Branding -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <header class="bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40">
         <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-9 h-9 bg-teal-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-emerald-500 to-teal-400 rounded-xl flex items-center justify-center text-slate-950 font-black text-lg shadow-lg shadow-emerald-500/20">
                     <i class="fas fa-paw"></i>
                 </div>
                 <div>
-                    <span class="font-extrabold text-xl tracking-tight text-slate-900">TierarztKosten<span class="text-teal-600">Check</span></span>
-                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-black text-xl tracking-tight text-white">Krallen<span class="text-emerald-400">Check</span></span>
+                        <span class="text-[10px] bg-emerald-500/20 text-emerald-300 font-extrabold px-2 py-0.5 rounded-full border border-emerald-500/30 uppercase tracking-wider">v2.0 PRO</span>
+                    </div>
+                    <span class="text-[10px] block text-slate-400 font-medium">by iebLabs • Gebührenordnung für Tierärzte (GOT 2026)</span>
                 </div>
             </div>
-            <span class="text-xs bg-teal-50 text-teal-700 font-bold px-3 py-1 rounded-full border border-teal-200">
-                GOT 2026 Gebührentabelle
-            </span>
+            <div class="flex items-center space-x-2">
+                <a href="https://github.com/iebLabs" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/80 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <i class="fab fa-github text-sm"></i> <span class="hidden sm:inline">GitHub</span>
+                </a>
+            </div>
         </div>
     </header>
 
     <!-- Werbeplatzhalter Oben -->
     <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
-        <div class="bg-slate-200 border border-dashed border-slate-300 rounded-lg p-2 text-center text-xs text-slate-400">
-            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        <div class="bg-slate-950/60 border border-dashed border-slate-800 rounded-xl p-3 text-center text-xs text-slate-500">
+            <span class="inline-block bg-slate-800/80 px-2 py-0.5 rounded text-[10px] font-mono text-emerald-400 mr-2">WERBUNG</span>
+            <span>Teure OP-Kosten vermeiden? Jetzt Tierkrankenversicherung ab 9 €/Monat vergleichen</span>
         </div>
     </div>
 
     <!-- Main Container -->
     <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
         <div class="text-center max-w-2xl mx-auto mb-8">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
-                Was kostet der Tierarztbesuch? <br class="sm:hidden">
-                <span class="text-teal-600">Schnell & transparent nach GOT.</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+                Was kostet die Tierarzt-Behandlung? <br>
+                <span class="text-emerald-400">GOT-Sätze & Notdienstgebühren transparent berechnen</span>
             </h1>
-            <p class="text-slate-600 text-sm sm:text-base">
-                Die neue Gebührenordnung (GOT) hat Tierarztpreise spürbar erhöht. Prüfe hier den 1-fachen bis 3-fachen Gebührensatz inklusive Notdienst-Zuschlag.
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                Prüfe die offiziellen Sätze nach der Gebührenordnung für Tierärzte (GOT) vom 1-fachen Regelsatz bis zum 4-fachen Notdienstsatz inkl. 59,50 € Notdienst-Grundpauschale.
             </p>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-8 items-start">
             
             <!-- Linke Spalte: Formular -->
-            <div class="lg:col-span-6 bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200">
-                <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center">
-                    <i class="fas fa-stethoscope text-teal-600 mr-2"></i> Behandlung wählen
+            <div class="lg:col-span-6 bg-slate-950/80 p-6 sm:p-7 rounded-2xl shadow-xl border border-slate-800 space-y-4">
+                <h2 class="text-base font-bold text-white flex items-center border-b border-slate-800/80 pb-3">
+                    <i class="fas fa-stethoscope text-emerald-400 mr-2"></i> Tierart & Eingriff
                 </h2>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Tierart</label>
-                        <select id="tierArt" onchange="calculateTierarzt()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                            <option value="hund">Hund</option>
-                            <option value="katze">Katze</option>
-                            <option value="kleintier">Kleintier (Kaninchen, Meerschweinchen)</option>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Tierart</label>
+                        <select id="tierArt" onchange="calculateTierarzt()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <option value="hund">🐕 Hund</option>
+                            <option value="katze">🐈 Katze</option>
+                            <option value="kleintier">🐇 Kleintier (Kaninchen, Meerschweinchen)</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Typische Behandlung / Eingriff</label>
-                        <select id="behandlungSelect" onchange="calculateTierarzt()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none">
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Behandlung / Eingriff</label>
+                        <select id="behandlungSelect" onchange="calculateTierarzt()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
                             <option value="untersuchung" data-basis="23.62">Allgemeine Untersuchung & Beratung</option>
-                            <option value="impfung" data-basis="45.00">Kombi-Impfung inklusive Untersuchung</option>
-                            <option value="blutbild" data-basis="65.00">Großes Blutbild (Labor)</option>
+                            <option value="impfung" data-basis="45.00">Kombi-Schutzimpfung inkl. Check</option>
+                            <option value="blutbild" data-basis="65.00">Großes Blutbild (Laboranalyse)</option>
                             <option value="roentgen" data-basis="78.00">Röntgenaufnahme (2 Ebenen)</option>
-                            <option value="ultraschall" data-basis="85.00">Ultraschall-Untersuchung Abdomen</option>
-                            <option value="zahnstein" data-basis="140.00">Zahnsteinentfernung mit Ultraschall + Narkose</option>
-                            <option value="kastration_w" data-basis="220.00">Kastration weibliches Tier (OP + Narkose)</option>
-                            <option value="kastration_m" data-basis="110.00">Kastration männliches Tier (OP)</option>
-                            <option value="kreuzband" data-basis="950.00">Kreuzband-OP (Komplexe Gelenk-Operation)</option>
+                            <option value="ultraschall" data-basis="85.00">Ultraschall Abdomen (Bauchorgane)</option>
+                            <option value="zahnstein" data-basis="145.00">Zahnsteinentfernung mit Ultraschall + Narkose</option>
+                            <option value="kastration_w" data-basis="240.00">Kastration weibliches Tier (OP + Narkose)</option>
+                            <option value="kastration_m" data-basis="120.00">Kastration männliches Tier</option>
+                            <option value="magendrehung" data-basis="850.00">Not-OP Magendrehung / Fremdkörper</option>
+                            <option value="kreuzband" data-basis="1100.00">Kreuzband-OP (TPLO / TTA)</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Abrechnungs-Satz (GOT-Faktor)</label>
-                        <select id="satzFaktor" onchange="calculateTierarzt()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-teal-500 focus:outline-none">
-                            <option value="1.0">1-facher Satz (Gesetzlicher Mindestsatz, selten)</option>
-                            <option value="1.8" selected>1,8-facher Satz (Bundesweiter Durchschnitt Werktags)</option>
-                            <option value="2.5">2,5-facher Satz (Komplizierter Fall / Spezialklinik)</option>
-                            <option value="3.0">3-facher Satz (Maximaler Regelsatz)</option>
-                            <option value="4.0">4-facher Satz (Notdienst / Wochenende / Nacht)</option>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Abrechnungssatz des Tierarztes</label>
+                        <select id="satzSelect" onchange="calculateTierarzt()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                            <option value="1.0">1-facher Satz (Basis, ländliche Regionen)</option>
+                            <option value="2.0" selected>2-facher Satz (Regulärer Tierarzt-Standard in Deutschland)</option>
+                            <option value="3.0">3-facher Satz (Tierklinik / erhöhter Schwierigkeitsgrad)</option>
+                            <option value="4.0">4-facher Höchstsatz (Nur im Notdienst zulässig)</option>
                         </select>
                     </div>
 
-                    <div>
-                        <label class="flex items-center space-x-2 text-xs text-slate-600 cursor-pointer pt-1">
-                            <input type="checkbox" id="notdienstPauschale" onchange="calculateTierarzt()" class="rounded text-teal-600 focus:ring-teal-500">
-                            <span>Notdienst-Pauschale hinzurechnen (+ 59,50 € gesetzliche Grundgebühr)</span>
-                        </label>
+                    <div class="bg-slate-900 p-3.5 rounded-xl border border-slate-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs font-bold text-white block">Notdienst-Zuschlag (§ 3a GOT)</span>
+                            <span class="text-[11px] text-slate-400">Nachts (18–8 Uhr) oder Wochenende (+59,50 € Pauschale)</span>
+                        </div>
+                        <input type="checkbox" id="notdienstCheck" onchange="calculateTierarzt()" class="w-5 h-5 accent-emerald-500 rounded cursor-pointer">
                     </div>
                 </div>
             </div>
 
-            <!-- Rechte Spalte: Kosten & Versicherung -->
+            <!-- Rechte Spalte: Kosten & Vorsorge -->
             <div class="lg:col-span-6 space-y-4">
                 
-                <!-- Hauptkachel -->
-                <div class="bg-gradient-to-r from-teal-900 to-slate-900 text-white p-6 rounded-2xl shadow-lg border-l-4 border-teal-400">
-                    <span class="text-xs uppercase font-bold tracking-widest text-teal-300 block mb-1">Geschätzte Gesamtkosten</span>
-                    <div class="text-4xl sm:text-5xl font-black text-white" id="tierarztGesamt">42,50 €</div>
-                    <div class="mt-3 flex items-center justify-between text-xs text-teal-100 border-t border-teal-700/60 pt-3">
-                        <span>GOT-Faktor: <strong id="labelSatz" class="text-white">1,8x</strong></span>
-                        <span>Inkl. 19% MwSt. & Material</span>
+                <div class="bg-gradient-to-br from-emerald-950 via-slate-950 to-slate-900 text-white p-6 rounded-2xl shadow-xl border border-emerald-500/30">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-emerald-300">Geschätzte Gesamtkosten (inkl. MwSt.)</span>
+                        <span class="text-[10px] bg-emerald-500/20 text-emerald-300 border border-emerald-500/30 px-2 py-0.5 rounded font-bold font-mono" id="satzBadge">2-facher Satz</span>
+                    </div>
+                    <div class="text-4xl sm:text-5xl font-black text-white font-mono my-2 tracking-tight" id="kostenSumme">56,22 €</div>
+                    <div class="grid grid-cols-2 gap-2 text-xs text-slate-300 border-t border-slate-800/80 pt-3 mt-2">
+                        <div>Netto Tierarztleistung: <strong id="nettoLeistung" class="text-emerald-300 font-mono">47,24 €</strong></div>
+                        <div>Notdienstpauschale: <strong id="notdienstSumme" class="text-slate-400 font-mono">0,00 €</strong></div>
                     </div>
                 </div>
 
-                <!-- Info Box -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-xs text-slate-600 space-y-2">
-                    <span class="font-bold uppercase tracking-wider text-slate-900 block">💡 GOT-Hintergrund</span>
-                    <p>
-                        Seit der GOT-Reform müssen Tierärzte mindestens den 1-fachen Satz abrechnen. Im Notdienst sind rechtlich bis zum 4-fachen Satz plus 59,50 € Notdienstgebühr Pflicht.
+                <!-- GOT Notdienst Warnkachel -->
+                <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 text-xs text-slate-300 space-y-2">
+                    <span class="font-extrabold uppercase tracking-wider text-emerald-400 flex items-center gap-1.5">
+                        <i class="fas fa-info-circle"></i> Gesetzliche GOT-Pflicht:
+                    </span>
+                    <p class="leading-relaxed">
+                        Tierärzte sind gesetzlich verpflichtet, im Notdienst mindestens den 2-fachen und bis zu 4-fachen Satz sowie die pauschale Notdienstgebühr von 50 € netto (59,50 € brutto) abzurechnen.
                     </p>
                 </div>
 
-                <!-- HIGH-TICKET AFFILIATE KACHEL (Tierkrankenversicherung) -->
-                <div class="bg-teal-50 border border-teal-300 p-5 rounded-2xl shadow-sm">
-                    <span class="text-xs uppercase font-bold tracking-wider text-teal-800 block mb-1">
-                        <i class="fas fa-shield-alt text-teal-600 mr-1"></i> Bis zu 100% Kostenerstattung
+                <!-- Versicherung Lead -->
+                <div class="bg-emerald-950/30 border border-emerald-500/30 p-5 rounded-2xl shadow-lg">
+                    <span class="text-xs uppercase font-extrabold tracking-wider text-emerald-400 block mb-1">
+                        <i class="fas fa-shield-dog text-emerald-400 mr-1"></i> Vor Rechnungs-Schock schützen
                     </span>
-                    <h3 class="text-sm font-bold text-slate-900 mb-1">Schutz vor teuren Tierarzt- & OP-Rechnungen</h3>
-                    <p class="text-xs text-slate-600 mb-3">Eine OP- oder Vollkrankenversicherung übernimmt Operations- und Behandlungskosten komplett.</p>
-                    <a href="https://www.check24.de/tierkrankenversicherung/" target="_blank" class="block text-center w-full bg-teal-600 hover:bg-teal-700 text-white font-bold py-2.5 rounded-lg text-xs shadow transition">
-                        Günstige Tierversicherungen vergleichen (ab 9 €/Monat)
+                    <h3 class="text-sm font-bold text-white mb-1.5">Tier-OP- & Krankenversicherung</h3>
+                    <p class="text-xs text-slate-300 mb-3 leading-relaxed">
+                        Eine Magendrehung oder ein Knochenbruch kostet am Wochenende schnell über 2.000 €. Gute OP-Tarife übernehmen 100% der Kosten.
+                    </p>
+                    <a href="https://www.check24.de/tierkrankenversicherung/" target="_blank" class="block text-center w-full bg-emerald-500 hover:bg-emerald-400 text-slate-950 font-extrabold py-2.5 rounded-xl text-xs shadow-lg shadow-emerald-500/20 transition">
+                        Günstigste Tierkrankenversicherungen vergleichen &rarr;
                     </a>
                 </div>
 
@@ -139,29 +152,85 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-        <p>&copy; 2026 TierarztKostenCheck • An iebLabs Project • Rechner basiert auf der Gebührenordnung für Tierärzte (GOT).</p>
+    <!-- Footer mit Buy me a Coffee & Modal Trigger -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-6 text-center text-xs text-slate-400">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 <strong>KrallenCheck v2.0 PRO</strong> • by <a href="https://github.com/iebLabs" target="_blank" class="text-slate-300 hover:text-white font-bold underline">iebLabs</a>
+            </div>
+            
+            <a href="https://paypal.me/iebsie" target="_blank" class="inline-flex items-center gap-1.5 bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-full text-xs font-bold transition">
+                <span>☕</span> <span>Spendier dem Dev einen Kaffee</span>
+            </a>
+
+            <div class="flex items-center space-x-4 text-xs">
+                <button onclick="openModal('impressum')" class="hover:text-white underline">Impressum</button>
+                <button onclick="openModal('datenschutz')" class="hover:text-white underline">Datenschutz</button>
+            </div>
+        </div>
+        <p class="text-[11px] text-slate-600 mt-3 max-w-xl mx-auto">
+            Rechtlicher Hinweis: Dieser Rechner dient der unverbindlichen Orientierung und stellt keinen Kostenvoranschlag dar.
+        </p>
     </footer>
+
+    <!-- Impressum / Datenschutz Modal -->
+    <div id="legalModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 max-w-lg w-full rounded-2xl p-6 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg font-bold">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent" class="text-xs text-slate-300 space-y-3 max-h-[70vh] overflow-y-auto pr-2">
+            </div>
+        </div>
+    </div>
 
     <!-- Logik -->
     <script>
         function calculateTierarzt() {
-            const behandlungSelect = document.getElementById('behandlungSelect');
-            const basis = parseFloat(behandlungSelect.options[behandlungSelect.selectedIndex].getAttribute('data-basis')) || 23.62;
-            const faktor = parseFloat(document.getElementById('satzFaktor').value) || 1.8;
-            const notdienst = document.getElementById('notdienstPauschale').checked;
+            const select = document.getElementById('behandlungSelect');
+            const basisNetto = parseFloat(select.options[select.selectedIndex].getAttribute('data-basis')) || 23.62;
+            const satz = parseFloat(document.getElementById('satzSelect').value) || 2.0;
+            const notdienst = document.getElementById('notdienstCheck').checked;
 
-            let gebuehr = basis * faktor;
+            let nettoSumme = basisNetto * satz;
+            let notdienstGebuehr = 0;
+
             if (notdienst) {
-                gebuehr += 59.50;
+                notdienstGebuehr = 50.00; // 50 € netto nach § 3a GOT
             }
 
-            // Inkl. ca. 19% MwSt
-            let endpreis = gebuehr * 1.19;
+            const gesamtNetto = nettoSumme + notdienstGebuehr;
+            const gesamtBrutto = gesamtNetto * 1.19; // 19% MwSt
 
-            document.getElementById('tierarztGesamt').innerText = endpreis.toFixed(2).replace('.', ',') + ' €';
-            document.getElementById('labelSatz').innerText = faktor.toString().replace('.', ',') + 'x';
+            document.getElementById('kostenSumme').innerText = gesamtBrutto.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            document.getElementById('nettoLeistung').innerText = nettoSumme.toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            document.getElementById('notdienstSumme').innerText = (notdienstGebuehr * 1.19).toLocaleString('de-DE', { minimumFractionDigits: 2, maximumFractionDigits: 2 }) + ' €';
+            document.getElementById('satzBadge').innerText = satz.toFixed(1).replace('.0', '') + '-facher Satz';
+        }
+
+        function openModal(type) {
+            const content = document.getElementById('modalContent');
+            const modal = document.getElementById('legalModal');
+
+            if (type === 'impressum') {
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Impressum</h3>
+                    <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                    <p>iebLabs<br>Inhaber: Ibrahim Schimmel<br>Braunschweig, Deutschland</p>
+                    <p><strong>Kontakt:</strong><br>E-Mail: digital-braunschweig@gmx.de<br>Mobil: 0177 5822380</p>
+                `;
+            } else {
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Datenschutzerklärung</h3>
+                    <p><strong>1. Datenschutz:</strong> Alle Berechnungen finden rein lokal in Ihrem Browser statt.</p>
+                    <p><strong>2. Werbedienste (Google AdSense):</strong> Wir setzen Google AdSense ein.</p>
+                `;
+            }
+            modal.classList.remove('hidden');
+        }
+
+        function closeModal() {
+            document.getElementById('legalModal').classList.add('hidden');
         }
 
         // Init
