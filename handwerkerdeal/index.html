@@ -1,0 +1,141 @@
+﻿<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HandwerkerSteuerCheck | Handwerkerkosten nach § 35a EStG von der Steuer absetzen</title>
+    <meta name="description" content="Berechne in 30 Sekunden, wie viel Euro du für Handwerker-Arbeitskosten vom Finanzamt zurückbekommst (20% von bis zu 6.000 € Arbeitslohn). Von iebLabs.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103550567947274" crossorigin="anonymous"></script>
+</head>
+<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- Header mit iebLabs Branding -->
+    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
+            <div class="flex items-center space-x-2">
+                <div class="w-9 h-9 bg-emerald-600 rounded-lg flex items-center justify-center text-white font-bold text-lg shadow">
+                    <i class="fas fa-receipt"></i>
+                </div>
+                <div>
+                    <span class="font-extrabold text-xl tracking-tight text-slate-900">Handwerker<span class="text-emerald-600">Steuer</span></span>
+                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                </div>
+            </div>
+            <span class="text-xs bg-emerald-50 text-emerald-700 font-bold px-3 py-1 rounded-full border border-emerald-200">
+                § 35a Abs. 3 EStG Rechner
+            </span>
+        </div>
+    </header>
+
+    <!-- Werbeplatzhalter Oben -->
+    <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
+        <div class="bg-slate-200 border border-dashed border-slate-300 rounded-lg p-2 text-center text-xs text-slate-400">
+            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        </div>
+    </div>
+
+    <!-- Main Container -->
+    <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
+        <div class="text-center max-w-2xl mx-auto mb-8">
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
+                Handwerkerrechnung bezahlt? <br class="sm:hidden">
+                <span class="text-emerald-600">Hol dir bis zu 1.200 € vom Staat zurück.</span>
+            </h1>
+            <p class="text-slate-600 text-sm sm:text-base">
+                Nach § 35a EStG erstattet das Finanzamt 20% der reinen Arbeits-, Maschinen- und Fahrtkosten direkt von deiner Einkommensteuerschuld.
+            </p>
+        </div>
+
+        <div class="grid lg:grid-cols-12 gap-8 items-start">
+            
+            <!-- Linke Spalte: Formular -->
+            <div class="lg:col-span-6 bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200">
+                <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center">
+                    <i class="fas fa-file-invoice text-emerald-600 mr-2"></i> Rechnungsbeträge eingeben
+                </h2>
+
+                <div class="space-y-4">
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Reine Arbeits-, Fahrt- & Maschinenkosten (€ brutto)</label>
+                        <input type="number" id="arbeitsLohn" value="2800" min="0" step="50" oninput="calculateHandwerkerSteuer()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <span class="text-[11px] text-slate-400">Nur Arbeitslohn ist absetzbar (Materialkosten sind gesetzlich ausgeschlossen).</span>
+                    </div>
+
+                    <div>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Bereits im selben Steuerjahr abgesetzte Arbeitskosten (€)</label>
+                        <input type="number" id="vorherigeKosten" value="0" min="0" step="50" oninput="calculateHandwerkerSteuer()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-emerald-500 focus:outline-none">
+                        <span class="text-[11px] text-slate-400">Der jährliche Höchstbetrag liegt bei maximal 6.000 € Arbeitslohn pro Haushalt.</span>
+                    </div>
+
+                    <div class="bg-amber-50 border border-amber-200 rounded-lg p-3 text-xs text-amber-800 space-y-1">
+                        <div class="font-bold flex items-center"><i class="fas fa-exclamation-circle text-amber-600 mr-1.5"></i> Gesetzliche Voraussetzung:</div>
+                        <p>Die Rechnung muss per <strong>Banküberweisung</strong> bezahlt worden sein. Barzahlungen (auch gegen Quittung) erkennt das Finanzamt niemals an!</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Rechte Spalte: Steuererstattung & Steuersoftware -->
+            <div class="lg:col-span-6 space-y-4">
+                
+                <!-- Hauptkachel -->
+                <div class="bg-gradient-to-r from-emerald-900 to-slate-900 text-white p-6 rounded-2xl shadow-lg border-l-4 border-emerald-400">
+                    <span class="text-xs uppercase font-bold tracking-widest text-emerald-300 block mb-1">Deine Steuererstattung (Cashback)</span>
+                    <div class="text-4xl sm:text-5xl font-black text-white" id="steuerErstattung">560,00 €</div>
+                    <div class="mt-3 flex items-center justify-between text-xs text-emerald-100 border-t border-emerald-700/60 pt-3">
+                        <span>Fördersatz: <strong class="text-white">20% direkt</strong></span>
+                        <span>Max. Erstattung: <strong class="text-white">1.200 € / Jahr</strong></span>
+                    </div>
+                </div>
+
+                <!-- Info Box -->
+                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-xs text-slate-600 space-y-2">
+                    <span class="font-bold uppercase tracking-wider text-slate-900 block">💡 Direkte Steuerermäßigung</span>
+                    <p>
+                        Dieser Betrag mindert nicht nur dein zu versteuerndes Einkommen, sondern wird <strong>1:1 direkt von deiner Steuerschuld abgezogen</strong>. Wenn du Steuern zahlst, landet dieser Betrag direkt auf deinem Konto!
+                    </p>
+                </div>
+
+                <!-- HIGH-TICKET AFFILIATE KACHEL (Steuer-Software) -->
+                <div class="bg-emerald-50 border border-emerald-300 p-5 rounded-2xl shadow-sm">
+                    <span class="text-xs uppercase font-bold tracking-wider text-emerald-800 block mb-1">
+                        <i class="fas fa-calculator text-emerald-600 mr-1"></i> Steuererklärung in 15 Minuten per App
+                    </span>
+                    <h3 class="text-sm font-bold text-slate-900 mb-1">Rechnung einscannen & Geld zurückholen</h3>
+                    <p class="text-xs text-slate-600 mb-3">Mit Taxfix oder WISO Steuer machst du deine Steuererklärung ohne Beamtendeutsch direkt am Handy.</p>
+                    <a href="https://taxfix.de" target="_blank" class="block text-center w-full bg-emerald-600 hover:bg-emerald-700 text-white font-bold py-2.5 rounded-lg text-xs shadow transition">
+                        Steuererklärung online starten
+                    </a>
+                </div>
+
+            </div>
+
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
+        <p>&copy; 2026 HandwerkerSteuer • An iebLabs Project • Rechner ersetzt keine Steuerberatung.</p>
+    </footer>
+
+    <!-- Logik -->
+    <script>
+        function calculateHandwerkerSteuer() {
+            const lohn = parseFloat(document.getElementById('arbeitsLohn').value) || 0;
+            const vorher = parseFloat(document.getElementById('vorherigeKosten').value) || 0;
+
+            const maxGesamtLohn = 6000;
+            const nochMoeglich = Math.max(0, maxGesamtLohn - vorher);
+            const ansetzbar = Math.min(lohn, nochMoeglich);
+
+            const erstattung = ansetzbar * 0.20;
+
+            document.getElementById('steuerErstattung').innerText = erstattung.toFixed(2).replace('.', ',') + ' €';
+        }
+
+        // Init
+        calculateHandwerkerSteuer();
+    </script>
+</body>
+</html>
