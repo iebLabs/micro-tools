@@ -1,124 +1,146 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="de">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ErbeRechner | Gesetzlichen Pflichtteil & Erbschaftssteuer berechnen</title>
-    <meta name="description" content="Berechne in 1 Minute den gesetzlichen Erbanteil, den Pflichtteil für Kinder und Ehegatten nach BGB sowie alle Freibeträge zur Erbschaftssteuer. Von iebLabs.">
+    <title>ErbschaftsZahlen v2.0 PRO | Pflichtteil & Erbschaftssteuer berechnen (§ 1924 BGB)</title>
+    <meta name="description" content="Berechne in 1 Minute den gesetzlichen Erbanteil, den Pflichtteil für Kinder und Ehepartner nach BGB sowie alle Erbschaftssteuer-Freibeträge (ErbStG).">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5103550567947274" crossorigin="anonymous"></script>
 </head>
-<body class="bg-slate-50 font-sans text-slate-800 antialiased min-h-screen flex flex-col justify-between">
+<body class="bg-slate-900 font-sans text-slate-100 antialiased min-h-screen flex flex-col justify-between selection:bg-amber-500 selection:text-slate-950">
 
     <!-- Header mit iebLabs Branding -->
-    <header class="bg-white border-b border-slate-200 sticky top-0 z-40">
+    <header class="bg-slate-950/80 backdrop-blur-md border-b border-slate-800 sticky top-0 z-40">
         <div class="max-w-5xl mx-auto px-4 py-3 flex items-center justify-between">
-            <div class="flex items-center space-x-2">
-                <div class="w-9 h-9 bg-slate-900 rounded-lg flex items-center justify-center text-amber-400 font-bold text-lg shadow">
+            <div class="flex items-center space-x-3">
+                <div class="w-10 h-10 bg-gradient-to-tr from-amber-500 to-yellow-300 rounded-xl flex items-center justify-center text-slate-950 font-black text-lg shadow-lg shadow-amber-500/20">
                     <i class="fas fa-landmark"></i>
                 </div>
                 <div>
-                    <span class="font-extrabold text-xl tracking-tight text-slate-900">Erbe<span class="text-amber-600">Rechner</span></span>
-                    <span class="text-[10px] block text-slate-400 font-semibold uppercase tracking-wider">by iebLabs</span>
+                    <div class="flex items-center gap-2">
+                        <span class="font-black text-xl tracking-tight text-white">Erbschafts<span class="text-amber-400">Zahlen</span></span>
+                        <span class="text-[10px] bg-amber-500/20 text-amber-300 font-extrabold px-2 py-0.5 rounded-full border border-amber-500/30 uppercase tracking-wider">v2.0 PRO</span>
+                    </div>
+                    <span class="text-[10px] block text-slate-400 font-medium">by iebLabs • Erbrecht & ErbStG 2026</span>
                 </div>
             </div>
-            <span class="text-xs bg-slate-100 text-slate-700 font-bold px-3 py-1 rounded-full border border-slate-300">
-                § 1924 BGB Gesetzliche Erbfolge
-            </span>
+            <div class="flex items-center space-x-2">
+                <a href="https://github.com/iebLabs" target="_blank" class="bg-slate-900 hover:bg-slate-800 text-slate-300 hover:text-white border border-slate-700/80 px-3 py-1.5 rounded-lg text-xs font-bold transition flex items-center gap-1.5">
+                    <i class="fab fa-github text-sm"></i> <span class="hidden sm:inline">GitHub</span>
+                </a>
+            </div>
         </div>
     </header>
 
-    <!-- Werbeplatzhalter Oben -->
+    <!-- Ad / Banner Oben -->
     <div class="max-w-5xl mx-auto px-4 pt-4 w-full">
-        <div class="bg-slate-200 border border-dashed border-slate-300 rounded-lg p-2 text-center text-xs text-slate-400">
-            [Werbeanzeige / Google AdSense Platzhalter Oben]
+        <div class="bg-slate-950/60 border border-dashed border-slate-800 rounded-xl p-3 text-center text-xs text-slate-500">
+            <span class="inline-block bg-slate-800/80 px-2 py-0.5 rounded text-[10px] font-mono text-amber-400 mr-2">WERBUNG</span>
+            <span>Immobilie oder Nachlass geerbt? Jetzt kostenlose Wertermittlung & Notar-Ratgeber anfordern</span>
         </div>
     </div>
 
     <!-- Main Container -->
     <main class="max-w-5xl mx-auto px-4 py-8 w-full flex-grow">
         <div class="text-center max-w-2xl mx-auto mb-8">
-            <h1 class="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight mb-3">
-                Erbe & Pflichtteil <br class="sm:hidden">
-                <span class="text-amber-600">einfach & verlässlich berechnen.</span>
+            <h1 class="text-3xl sm:text-4xl font-extrabold text-white tracking-tight mb-3">
+                Nachlass, Pflichtteil & Steuer <br>
+                <span class="text-amber-400">transparent & rechtssicher berechnen</span>
             </h1>
-            <p class="text-slate-600 text-sm sm:text-base">
-                Ermittle in Sekunden die Verteilung des Nachlasses, den gesetzlichen Pflichtteilsanspruch (§ 2303 BGB) und anfallende Erbschaftssteuer-Freibeträge.
+            <p class="text-slate-400 text-sm sm:text-base leading-relaxed">
+                Ermittle in Sekunden die Verteilung des Nachlasses, den gesetzlichen Pflichtteilsanspruch (§ 2303 BGB) und anfallende Erbschaftsteuer-Freibeträge (§ 16 ErbStG).
             </p>
         </div>
 
         <div class="grid lg:grid-cols-12 gap-8 items-start">
             
             <!-- Linke Spalte: Formular -->
-            <div class="lg:col-span-6 bg-white p-6 sm:p-7 rounded-2xl shadow-sm border border-slate-200">
-                <h2 class="text-base font-bold text-slate-900 mb-4 flex items-center">
-                    <i class="fas fa-coins text-amber-600 mr-2"></i> Nachlass & Verwandtschaft
+            <div class="lg:col-span-6 bg-slate-950/80 p-6 sm:p-7 rounded-2xl shadow-xl border border-slate-800 space-y-4">
+                <h2 class="text-base font-bold text-white flex items-center border-b border-slate-800/80 pb-3">
+                    <i class="fas fa-coins text-amber-400 mr-2"></i> Nachlass & Verwandtschaftsgrad
                 </h2>
 
                 <div class="space-y-4">
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Geschätzter Gesamtnachlass (€)</label>
-                        <input type="number" id="nachlassWert" value="250000" min="1000" step="5000" oninput="calculateErbe()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                        <span class="text-[11px] text-slate-400">Immobilienwerte, Barvermögen, Depots abzüglich Schulden.</span>
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Geschätzter Reinnachlass (€)</label>
+                            <span class="text-xs text-amber-400 font-mono font-bold" id="nachlassDisplay">250.000 €</span>
+                        </div>
+                        <input type="number" id="nachlassWert" value="250000" min="1000" step="5000" oninput="calculateErbe()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm font-bold text-white focus:ring-2 focus:ring-amber-500 focus:outline-none font-mono">
+                        <span class="text-[11px] text-slate-500 block mt-1">Immobilienwerte, Bankkonten & Wertgegenstände abzüglich Nachlassverbindlichkeiten.</span>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Familienstand des Erblassers</label>
-                        <select id="familienstand" onchange="calculateErbe()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                            <option value="verheiratet_zugewinn">Verheiratet (Regel-Güterstand: Zugewinngemeinschaft)</option>
-                            <option value="verheiratet_guetertrennung">Verheiratet (Gütertrennung)</option>
-                            <option value="ledig">Ledig / Geschieden / Verwitwet</option>
+                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-300 mb-1">Familienstand des Erblassers</label>
+                        <select id="familienstand" onchange="calculateErbe()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2.5 text-sm text-slate-200 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                            <option value="verheiratet_zugewinn">Verheiratet (Gesetzlicher Güterstand: Zugewinngemeinschaft)</option>
+                            <option value="verheiratet_guetertrennung">Verheiratet (Gütertrennung per Ehevertrag)</option>
+                            <option value="ledig">Ledig / Verwitwet / Geschieden</option>
                         </select>
                     </div>
 
                     <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Anzahl der Kinder</label>
-                        <input type="number" id="anzahlKinder" value="2" min="0" max="10" oninput="calculateErbe()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm font-bold text-slate-900 focus:ring-2 focus:ring-amber-500 focus:outline-none">
+                        <div class="flex justify-between items-center mb-1">
+                            <label class="text-xs font-bold uppercase tracking-wider text-slate-300">Anzahl der Kinder (Erben 1. Ordnung)</label>
+                            <span class="text-xs text-amber-400 font-mono font-bold" id="kinderDisplay">2 Kinder</span>
+                        </div>
+                        <input type="range" id="kinderRange" min="0" max="6" value="2" oninput="syncKinderFromRange()" class="w-full accent-amber-500 mb-1">
+                        <input type="number" id="anzahlKinder" value="2" min="0" max="10" oninput="syncKinderFromNumber()" class="w-full bg-slate-900 border border-slate-700 rounded-xl px-3.5 py-2 text-sm font-bold text-white focus:ring-2 focus:ring-amber-500 focus:outline-none font-mono">
                     </div>
 
-                    <div>
-                        <label class="block text-xs font-bold uppercase tracking-wider text-slate-700 mb-1">Berechnungstyp</label>
-                        <select id="berechnungsTyp" onchange="calculateErbe()" class="w-full bg-slate-50 border border-slate-300 rounded-lg px-3 py-2 text-sm focus:ring-2 focus:ring-amber-500 focus:outline-none">
-                            <option value="gesetzlich">Gesetzliche Erbfolge (Kein Testament vorhanden)</option>
-                            <option value="pflichtteil">Pflichtteil (Enterbung durch Testament)</option>
-                        </select>
+                    <div class="bg-slate-900 border border-slate-800 rounded-xl p-3.5 text-xs text-slate-400 space-y-1">
+                        <span class="font-bold text-slate-200 block">ℹ️ Gesetzliche Pflichtteils-Regel (§ 2303 BGB):</span>
+                        <p>Wird ein Kind oder Ehegatte enterbt (z. B. durch Testament), steht ihm dennoch der Pflichtteil in Höhe von **exakt 50% seines gesetzlichen Erbteils** in bar zu.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Rechte Spalte: Erbanteile & Freibeträge -->
+            <!-- Rechte Spalte: Quoten & Pflichtteile -->
             <div class="lg:col-span-6 space-y-4">
                 
-                <!-- Hauptkachel -->
-                <div class="bg-gradient-to-r from-slate-900 to-slate-800 text-white p-6 rounded-2xl shadow-lg border-l-4 border-amber-500">
-                    <span class="text-xs uppercase font-bold tracking-widest text-amber-400 block mb-1" id="erbeLabel">Erbanteil pro Kind</span>
-                    <div class="text-4xl sm:text-5xl font-black text-white" id="kindAnteilBetrag">62.500 €</div>
-                    <div class="mt-3 flex items-center justify-between text-xs text-slate-300 border-t border-slate-700 pt-3">
-                        <span>Anteil Ehegatte: <strong id="ehegatteBetrag" class="text-white">125.000 € (50%)</strong></span>
-                        <span>Quote: <strong id="quoteText" class="text-white">25% pro Kind</strong></span>
+                <!-- Hauptkachel: Ehepartner Quote -->
+                <div class="bg-gradient-to-br from-amber-950 via-slate-950 to-slate-900 text-white p-6 rounded-2xl shadow-xl border border-amber-500/30">
+                    <div class="flex justify-between items-center mb-1">
+                        <span class="text-xs uppercase font-extrabold tracking-widest text-amber-300">Erbquote Ehepartner</span>
+                        <span class="text-[10px] bg-amber-500/20 text-amber-300 border border-amber-500/30 px-2 py-0.5 rounded font-bold font-mono" id="ehepartnerQuote">50% Anteil</span>
+                    </div>
+                    <div class="text-3xl sm:text-4xl font-black text-white font-mono my-2 tracking-tight" id="ehepartnerSumme">125.000 €</div>
+                    <div class="text-xs text-slate-400 border-t border-slate-800/80 pt-2 flex justify-between">
+                        <span>Freibetrag nach § 16 ErbStG:</span>
+                        <span class="text-emerald-400 font-bold font-mono">500.000 € (Steuerfrei)</span>
                     </div>
                 </div>
 
-                <!-- Steuerfreibeträge Box -->
-                <div class="bg-white p-5 rounded-2xl shadow-sm border border-slate-200 text-xs text-slate-600 space-y-2">
-                    <span class="font-bold uppercase tracking-wider text-slate-900 block">🏛️ Gesetzliche Erbschaftssteuer-Freibeträge</span>
-                    <ul class="list-disc pl-4 space-y-1">
-                        <li><strong>Ehegatten / Lebenspartner:</strong> 500.000 € steuerfrei + Versorgungsfreibetrag</li>
-                        <li><strong>Kinder (pro Kind):</strong> 400.000 € steuerfrei</li>
-                        <li><strong>Enkelkinder:</strong> 200.000 € steuerfrei</li>
-                    </ul>
+                <!-- Kachel: Kinder Quote -->
+                <div class="bg-slate-950/80 p-5 rounded-2xl border border-slate-800 space-y-2">
+                    <div class="flex justify-between items-center">
+                        <span class="text-xs uppercase font-extrabold tracking-wider text-slate-300">Anteil pro Kind</span>
+                        <span class="text-xs font-mono font-bold text-amber-400" id="kindQuote">25% Anteil</span>
+                    </div>
+                    <div class="text-2xl font-black text-white font-mono" id="kindSumme">62.500 €</div>
+                    <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800/80 pt-2">
+                        <span>Freibetrag pro Kind:</span>
+                        <span class="text-emerald-400 font-bold font-mono">400.000 €</span>
+                    </div>
+                    <div class="text-xs text-slate-400 flex justify-between border-t border-slate-800/80 pt-2">
+                        <span>Pflichtteil bei Enterbung:</span>
+                        <span class="text-amber-300 font-bold font-mono" id="kindPflichtteil">31.250 € (12,5%)</span>
+                    </div>
                 </div>
 
-                <!-- HIGH-TICKET NOTAR & FACHANWALT LEADGEN -->
-                <div class="bg-amber-50 border border-amber-300 p-5 rounded-2xl shadow-sm">
-                    <span class="text-xs uppercase font-bold tracking-wider text-amber-800 block mb-1">
-                        <i class="fas fa-file-contract text-amber-600 mr-1"></i> Streit vermeiden & Testament rechtssicher gestalten
+                <!-- Notar / Erbrecht Lead -->
+                <div class="bg-indigo-950/30 border border-indigo-500/30 p-5 rounded-2xl shadow-lg">
+                    <span class="text-xs uppercase font-extrabold tracking-wider text-indigo-400 block mb-1">
+                        <i class="fas fa-file-signature text-indigo-400 mr-1"></i> Streit im Erbfall vermeiden
                     </span>
-                    <h3 class="text-sm font-bold text-slate-900 mb-1">Fachanwalt für Erbrecht kontaktieren</h3>
-                    <p class="text-xs text-slate-600 mb-3">Unklare Testamente führen zu jahrelangen Streitigkeiten. Eine notarielle Beratung sichert das Familienvermögen.</p>
-                    <a href="https://www.anwaltauskunft.de" target="_blank" class="block text-center w-full bg-amber-600 hover:bg-amber-700 text-white font-bold py-2.5 rounded-lg text-xs shadow transition">
-                        Erbrecht-Experten in der Region finden
+                    <h3 class="text-sm font-bold text-white mb-1.5">Testament oder Berliner Testament rechtssicher gestalten</h3>
+                    <p class="text-xs text-slate-300 mb-3 leading-relaxed">
+                        Ohne Testament greift die gesetzliche Erbengemeinschaft – das führt bei Immobilien oft zur Zwangsversteigerung.
+                    </p>
+                    <a href="https://www.notar.de" target="_blank" class="block text-center w-full bg-indigo-500 hover:bg-indigo-400 text-white font-extrabold py-2.5 rounded-xl text-xs shadow-lg shadow-indigo-500/20 transition">
+                        Notar-Suche der Bundesnotarkammer &rarr;
                     </a>
                 </div>
 
@@ -127,60 +149,111 @@
         </div>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-white border-t border-slate-200 py-6 text-center text-xs text-slate-500">
-        <p>&copy; 2026 ErbeRechner • An iebLabs Project • Rechner ersetzt keine Rechts- oder Steuerberatung.</p>
+    <!-- Footer mit Buy me a Coffee & Modal Trigger -->
+    <footer class="bg-slate-950 border-t border-slate-800/80 py-6 text-center text-xs text-slate-400">
+        <div class="max-w-5xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-4">
+            <div>
+                &copy; 2026 <strong>ErbschaftsZahlen v2.0 PRO</strong> • by <a href="https://github.com/iebLabs" target="_blank" class="text-slate-300 hover:text-white font-bold underline">iebLabs</a>
+            </div>
+            
+            <a href="https://paypal.me/iebsie" target="_blank" class="inline-flex items-center gap-1.5 bg-amber-500/10 hover:bg-amber-500/20 text-amber-300 border border-amber-500/30 px-3 py-1.5 rounded-full text-xs font-bold transition">
+                <span>☕</span> <span>Spendier dem Dev einen Kaffee</span>
+            </a>
+
+            <div class="flex items-center space-x-4 text-xs">
+                <button onclick="openModal('impressum')" class="hover:text-white underline">Impressum</button>
+                <button onclick="openModal('datenschutz')" class="hover:text-white underline">Datenschutz</button>
+            </div>
+        </div>
+        <p class="text-[11px] text-slate-600 mt-3 max-w-xl mx-auto">
+            Rechtlicher Hinweis: Dieser Rechner dient der unverbindlichen Orientierung und stellt keine Rechts- oder Steuerberatung im Sinne des RDG/StBerG dar.
+        </p>
     </footer>
+
+    <!-- Impressum / Datenschutz Modal -->
+    <div id="legalModal" class="hidden fixed inset-0 z-50 bg-black/80 backdrop-blur-sm flex items-center justify-center p-4">
+        <div class="bg-slate-900 border border-slate-800 max-w-lg w-full rounded-2xl p-6 relative shadow-2xl">
+            <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white text-lg font-bold">
+                <i class="fas fa-times"></i>
+            </button>
+            <div id="modalContent" class="text-xs text-slate-300 space-y-3 max-h-[70vh] overflow-y-auto pr-2">
+            </div>
+        </div>
+    </div>
 
     <!-- Logik -->
     <script>
+        function syncKinderFromRange() {
+            const val = document.getElementById('kinderRange').value;
+            document.getElementById('anzahlKinder').value = val;
+            calculateErbe();
+        }
+
+        function syncKinderFromNumber() {
+            const val = document.getElementById('anzahlKinder').value;
+            document.getElementById('kinderRange').value = val;
+            calculateErbe();
+        }
+
         function calculateErbe() {
-            const summe = parseFloat(document.getElementById('nachlassWert').value) || 0;
+            const nachlass = parseFloat(document.getElementById('nachlassWert').value) || 0;
             const stand = document.getElementById('familienstand').value;
-            const kinder = parseInt(document.getElementById('anzahlKinder').value) || 0;
-            const typ = document.getElementById('berechnungsTyp').value;
+            const kinder = parseInt(document.getElementById('anzahlKinder').value, 10) || 0;
+
+            document.getElementById('nachlassDisplay').innerText = nachlass.toLocaleString('de-DE') + ' €';
+            document.getElementById('kinderDisplay').innerText = kinder + (kinder === 1 ? ' Kind' : ' Kinder');
 
             let eheQuote = 0;
-            let kinderGesamtQuote = 1;
-
             if (stand === 'verheiratet_zugewinn') {
-                eheQuote = 0.50; // 1/4 Erbe + 1/4 pauschaler Zugewinnausgleich
-                kinderGesamtQuote = 0.50;
+                eheQuote = kinder > 0 ? 0.5 : 0.75;
             } else if (stand === 'verheiratet_guetertrennung') {
-                if (kinder === 1) {
-                    eheQuote = 0.50;
-                    kinderGesamtQuote = 0.50;
-                } else if (kinder === 2) {
-                    eheQuote = 0.3333;
-                    kinderGesamtQuote = 0.6666;
-                } else {
-                    eheQuote = 0.25;
-                    kinderGesamtQuote = 0.75;
-                }
+                if (kinder === 0) eheQuote = 0.5;
+                else if (kinder === 1) eheQuote = 0.5;
+                else if (kinder === 2) eheQuote = 0.3333;
+                else eheQuote = 0.25;
             } else {
                 eheQuote = 0;
-                kinderGesamtQuote = 1;
             }
 
-            let kindEinzelQuote = kinder > 0 ? (kinderGesamtQuote / kinder) : 0;
+            const eheBetrag = Math.round(nachlass * eheQuote);
+            const restNachlass = Math.max(0, nachlass - eheBetrag);
+            const kindBetrag = kinder > 0 ? Math.round(restNachlass / kinder) : 0;
+            const kindQ = kinder > 0 ? ((1 - eheQuote) / kinder) * 100 : 0;
+            const kindPflicht = Math.round(kindBetrag / 2);
 
-            let eheBetrag = summe * eheQuote;
-            let kindBetrag = summe * kindEinzelQuote;
+            document.getElementById('ehepartnerQuote').innerText = (eheQuote * 100).toFixed(1).replace('.0', '') + '% Anteil';
+            document.getElementById('ehepartnerSumme').innerText = eheBetrag.toLocaleString('de-DE') + ' €';
 
-            let isPflichtteil = (typ === 'pflichtteil');
-            if (isPflichtteil) {
-                // Pflichtteil ist immer die Hälfte des gesetzlichen Erbteils
-                kindBetrag = kindBetrag / 2;
-                eheBetrag = eheBetrag / 2;
-                document.getElementById('erbeLabel').innerText = "Pflichtteilsanspruch pro Kind (in bar)";
-                document.getElementById('quoteText').innerText = (kindEinzelQuote * 50).toFixed(1) + "% Pflichtteil";
+            document.getElementById('kindQuote').innerText = kinder > 0 ? (kindQ.toFixed(1).replace('.0', '') + '% Anteil') : 'Keine Kinder';
+            document.getElementById('kindSumme').innerText = kinder > 0 ? (kindBetrag.toLocaleString('de-DE') + ' €') : '0 €';
+            document.getElementById('kindPflichtteil').innerText = kinder > 0 ? (kindPflicht.toLocaleString('de-DE') + ' € (' + (kindQ / 2).toFixed(1).replace('.0', '') + '%)') : 'Keine Ansprüche';
+        }
+
+        function openModal(type) {
+            const content = document.getElementById('modalContent');
+            const modal = document.getElementById('legalModal');
+
+            if (type === 'impressum') {
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Impressum</h3>
+                    <p><strong>Angaben gemäß § 5 TMG:</strong></p>
+                    <p>iebLabs<br>Inhaber: Ibrahim Schimmel<br>Braunschweig, Deutschland</p>
+                    <p><strong>Kontakt:</strong><br>E-Mail: digital-braunschweig@gmx.de<br>Mobil: 0177 5822380</p>
+                    <p><strong>Haftungsausschluss:</strong> Sämtliche Berechnungen und Quoten beruhen auf den Vorschriften des BGB und ErbStG. Da jeder Erbfall individuelle Besonderheiten (z. B. Schenkungen, Vorerbschaften) aufweisen kann, wird keine Haftung für die Richtigkeit übernommen.</p>
+                `;
             } else {
-                document.getElementById('erbeLabel').innerText = "Gesetzlicher Erbanteil pro Kind";
-                document.getElementById('quoteText').innerText = (kindEinzelQuote * 100).toFixed(1) + "% pro Kind";
+                content.innerHTML = `
+                    <h3 class="text-base font-bold text-white mb-2">Datenschutzerklärung</h3>
+                    <p><strong>1. Datenschutz auf einen Blick:</strong> Alle Berechnungen auf dieser Seite finden zu 100% lokal im Browser des Nutzers statt. Es werden keinerlei persönliche Finanz- oder Vermögensdaten übertragen oder gespeichert.</p>
+                    <p><strong>2. Werbedienste (Google AdSense):</strong> Diese Website nutzt Google AdSense zur Auslieferung von Anzeigen.</p>
+                    <p><strong>3. Hosting:</strong> Diese Webseite wird statisch über Netlify gehostet.</p>
+                `;
             }
+            modal.classList.remove('hidden');
+        }
 
-            document.getElementById('kindAnteilBetrag').innerText = Math.round(kindBetrag).toLocaleString('de-DE') + ' €';
-            document.getElementById('ehegatteBetrag').innerText = Math.round(eheBetrag).toLocaleString('de-DE') + ' € (' + (eheQuote * (isPflichtteil ? 50 : 100)).toFixed(0) + '%)';
+        function closeModal() {
+            document.getElementById('legalModal').classList.add('hidden');
         }
 
         // Init
